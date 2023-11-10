@@ -1,0 +1,28 @@
+.container {
+ width: 1920px; height: 1080px; position: relative; background: #EEEEEE
+}
+
+.frame {
+ width: 545px; height: 738px; left: 688px; top: 171px; position: absolute
+}
+
+.Line3 {
+width: 416.50px; height: 0px; left: 68px; top: 310px; position: absolute; border: 2px black solid
+}
+
+.Ninja{
+width: 162px; height: 63px; left: 193px; top: 0px; position: absolute; color: black; font-size: 52px; font-family: Fredoka One; font-weight: 400; word-wrap: break-word
+}
+
+.Rectangle19{
+width: 422px; height: 71px; left: 63px; top: 612px; position: absolute; background: #DBDADC; border-radius: 5px
+}
+
+.password1{
+width: 357px; height: 33px; left: 64px; top: 386px; position: absolute; color:
+#A9A9A9; font-size: 20px; font-family: Inria Sans; font-weight: 400; word-wrap: break-word
+}
+.password2{
+width: 357px; height: 33px; left: 65px; top: 494px; position: absolute;
+color: #A9A9A9; font-size: 20px; font-family: Inria Sans; font-weight: 400; word-wrap: break-word
+}
