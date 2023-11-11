@@ -1,9 +1,11 @@
 package LicenseProject.License.entity;
 
 
+import LicenseProject.License.dto.MemberDTO;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Setter
@@ -20,6 +22,11 @@ public class MemberEntity {
     @Column
     private String memberPassword;
 
-
+    public static MemberEntity toMemberEntity(MemberDTO memberDTO){
+        MemberEntity memberEntity = new MemberEntity();
+        memberEntity.setMemberEmail(memberDTO.getMemberEmail());
+        memberEntity.setMemberPassword(memberDTO.getMemberPassword());
+        return memberEntity;
+    }
 
 }

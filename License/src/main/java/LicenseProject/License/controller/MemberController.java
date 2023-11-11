@@ -2,6 +2,7 @@ package LicenseProject.License.controller;
 
 import LicenseProject.License.dto.MemberDTO;
 import LicenseProject.License.service.MemberService;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,6 +31,19 @@ public class MemberController {
 
         return "index";
     }
+
+    @PostMapping("/member/login")
+    public String login(@ModelAttribute MemberDTO memberDTO, HttpSession session){
+        MemberDTO loginResult= memberService.login(memberDTO);
+        if(loginResult != null){
+            session.setAttribute("loginEmail",loginResult.getMemberEmail());
+            return "main";
+        }else {
+            return "login";
+        }
+    }
+
+
 
     @GetMapping("/member/login")
         public String loginForm(){
