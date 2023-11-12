@@ -7,6 +7,7 @@ import LicenseProject.License.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.Member;
 import java.util.Optional;
 
 @Service
@@ -21,6 +22,13 @@ public class MemberService {
 
 
     }
+
+    public boolean isEmailUnique(String memberEmail){
+
+        return !memberRepositoy.existsByMemberEmail(memberEmail);
+    }
+
+
 
     public MemberDTO login(MemberDTO memberDTO) {
     // 1. 회원이 입력한 이메일로 DB에서 조회릏하
@@ -44,4 +52,32 @@ public class MemberService {
             return null;
         }
     }
+
+    public MemberDTO updateForm(String myEmail) {
+        Optional<MemberEntity> optionalMemberEntity =memberRepositoy.findByMemberEmail(myEmail);
+        if (optionalMemberEntity.isPresent()){
+            return MemberDTO.toMemberDTO(optionalMemberEntity.get());
+        }else {
+            return null;
+        }
+    }
+
+    public void update(MemberDTO memberDTO) {
+        memberRepositoy.save(MemberEntity.toUpdateMemberEntity(memberDTO));
+    }
+
+    public String emailCheck(String memberEmail) {
+        Optional<MemberEntity> byMemberEmail = memberRepositoy.findByMemberEmail(memberEmail);
+        if (byMemberEmail.isPresent()){
+            return null;
+        }else{
+            return "ok";
+        }
+    }
+
+
+
+
+
+
 }

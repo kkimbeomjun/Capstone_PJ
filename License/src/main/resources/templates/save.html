@@ -1,34 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <script
+          src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="/css/save.css">
 </head>
 <body style="background-color:#F9F9F9">
-<form action = "/member/save" method="post">
+<form action = "/member/save" method="post" onsubmit="return validatePassword()">
 <div class="container">
   <div class="frame">
     <div class="Rectangle1" style="width: 513px; height: 644px; left: 18px; top: 81px; position: absolute; background: #F9F9F9; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); border-radius: 20px"></div>
     <div style="width: 357px; height: 38px; left: 68px; top: 127px; position: absolute; color: black; font-size: 30px; font-family: Inria Sans; font-weight: 400; word-wrap: break-word">이메일로 시작</div>
-    <div style="width: 357px; height: 38px; left: 68px; top: 207px; position: absolute; color: black; font-size: 25px; font-family: Inria Sans; font-weight: 400; word-wrap: break-word">이메일</div>
+    <div style="width: 357px; height: 38px; left: 68px; top: 207px; position: absolute; color: black; font-size: 25px;
+    font-family: Inria Sans; font-weight: 400; word-wrap: break-word">이메일<br><p style="font-size: 10px" id="check-result"></p></div>
+
     <div class="Line3"></div>
-    <div style="width: 417px; height: 55px; left: 66px; top: 265px; position: absolute; color: #A9A9A9; font-size: 25px; font-family: Inria Sans; font-weight: 400; word-wrap: break-word">
-      <input type="text" name = "memberEmail" placeholder="이메일을 입력해주세요"></div>
+    <div style="width: 417px; height: 55px; left: 66px; top: 265px; position: absolute; color: #A9A9A9;
+    font-size: 25px; font-family: Inria Sans; font-weight: 400; word-wrap: break-word">
+      <input type="text" name = "memberEmail" id = "memberEmail" onkeyup="emailCheck()" placeholder="이메일을 입력해주세요"></div>
     <div class="Ninja">NINJA</div>
     <div class="Rectangle19"></div>
-    <div style="width: 59px; height: 30px; left: 248px; top: 632px; position: absolute; color: black; font-size: 25px; font-family: Inria Sans; font-weight: 400;
-    word-wrap: break-word"><input type="submit" value="회원가입"></div>
-    <div style="width: 84px; height: 20px; left: 64px; top: 340px; position: absolute; color: black; font-size: 20px; font-family: Inria Sans; font-weight: 400; word-wrap: break-word">비밀번호</div>
+    <div style="width: auto; height: 30px; left: 248px; top: 632px; position: absolute; color: black; font-size: 25px;
+    font-family: Inria Sans; font-weight: 400;
+    word-wrap: break-word"><input type="submit" value="회원가입" onclick="checkDuplicate()"></div>
+<!--    <div style="width: 84px; height: 20px; left: 64px; top: 340px; position: absolute; color: black; font-size: 20px; font-family: Inria Sans; font-weight: 400; word-wrap: break-word">비밀번호-->
+<!--      <p style="font-size: 10px">특수문자 하나 4자리이상</p>-->
+<!--    </div>-->
+    <div style="width: 84px; height: 20px; left: 64px; top: 340px; position: absolute; color: black; font-size: 20px; font-family: Inria Sans; font-weight: 400; white-space: nowrap;">
+      비밀번호<br>
+      <p style="font-size: 10px; display: inline-block; margin-left: 4px;">비밀번호는 8자 이상 특수문자는 최소 하나를 포함해 주세요</p>
+    </div>
     <div class="Line4" style="width: 422px; height: 0px; left: 63px; top: 422.60px; position: absolute; border: 1px black solid"></div>
     <div class="password1" style="width: 357px; height: 33px; left: 64px; top: 386px; position: absolute; color:
-#A9A9A9; font-size: 20px; font-family: Inria Sans; font-weight: 400; word-wrap: break-word"><input type="password" name = "memberPassword" placeholder="비밀번호를 입력해주세요"></div>
+#A9A9A9; font-size: 20px; font-family: Inria Sans; font-weight: 400; word-wrap: break-word">
+      <input type="password" name = "memberPassword" id="password" placeholder="비밀번호를 입력해주세요"></div>
     <div style="width: 154px; height: 30px; left: 65px; top: 448px; position: absolute; color: black; font-size: 20px; font-family: Inria Sans; font-weight: 400; word-wrap: break-word">비밀번호 확인</div>
     <div class="Line5" style="width: 419px; height: 0px; left: 64px; top: 530px; position: absolute; border: 1px black solid"></div>
     <div class="password2" style="width: 357px; height: 33px; left: 65px; top: 494px; position: absolute;
-color: #A9A9A9; font-size: 20px; font-family: Inria Sans; font-weight: 400; word-wrap: break-word"><input type="text" name = "memberPassword1" placeholder="비밀번호를 입력해주세요"></div>
+color: #A9A9A9; font-size: 20px; font-family: Inria Sans; font-weight: 400; word-wrap: break-word"><input type="password" id="password1" name = "memberPassword1" placeholder="비밀번호를 입력해주세요"></div>
   </div>
+<!--  <span id="check-result" style="width: 369px; height: 12px; left: 68px; top: 308px; position: absolute; color: black;-->
+<!--  font-size: 20px; font-family: Inria Sans; font-weight: 400; word-wrap: break-word"></span>-->
 </div>
 </form>
 </body>
+<script th:inline="javascript">
+  const emailCheck = () => {
+    const email = document.getElementById("memberEmail").value;
+    const checkResult = document.getElementById("check-result");
+    console.log("입력값: ", email);
+
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+     if (!emailPattern.test(email)) {
+        checkResult.style.color = "red";
+        checkResult.innerHTML = "올바른 이메일 형식이 아닙니다.";
+        return;
+    }
+
+    $.ajax({
+      // 요청방식: post, url: "email-check",데이터: 이메일
+      type: "post",
+      url: "/member/email-check",
+      data: {
+          "memberEmail" : email
+      },
+      success:function(res){
+        console.log("요청성공",res);
+        if (res == "ok"){
+          console.log("사용가능한 이메일");
+          checkResult.style.color = "green";
+          checkResult.innerHTML = "사용가능한 이메일";
+        }else{
+          console.log("이미 사용중인 이메일")
+          checkResult.style.color = "red";
+          checkResult.innerHTML = "이미 사용중인 이메일";
+        }
+      },
+      error:function(err){
+        console.log("에러발생",err);
+      }
+    });
+  }
+function validatePassword() {
+            // 비밀번호 입력 필드의 값을 가져오기
+            var password = document.getElementById('password').value;
+            var password1 = document.getElementById('password1').value;
+
+            // 간단한 유효성 검사 로직 예시
+            if (password.length < 8) {
+                alert('비밀번호는 8자 이상이어야 합니다.');
+                return false; // 폼 전송을 막음
+            }
+
+            // 특수문자 포함 여부 확인을 위한 정규표현식
+    var specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
+
+    if (!specialCharRegex.test(password)) {
+        alert('비밀번호에 특수문자를 최소한 하나 이상 포함해주세요.');
+        return false;
+    }
+
+    if (password !== password1) {
+        alert('비밀번호와 비밀번호 확인 값이 일치하지 않습니다.');
+        return false;
+    }
+
+    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+    var email = document.getElementById('email').value;
+    if (!emailRegex.test(email)) {
+        alert('올바른 이메일 형식이 아닙니다.');
+        return false;
+    }
+
+
+
+            return true; // 폼 전송을 진행
+        }
+
+
+<!--function checkDuplicate() {-->
+<!--           const email = document.getElementById("memberEmail").value;-->
+<!--            const checkResult = document.getElementById("check-result");-->
+
+<!--            $.ajax({-->
+<!--                url: "/member/email-check",-->
+<!--                type: "GET",-->
+<!--                data: {-->
+<!--		"memberEmail": email-->
+<!--		},-->
+<!--                success: function(response) {-->
+<!--                    if (response) {-->
+<!--                        alert("회원가입 완료 되었습니다");-->
+
+<!--                    } else {-->
+<!--                        alert("중복된 이메일입니다. 다른 이메일을 이용해주세요");-->
+<!--                    }-->
+<!--                },-->
+<!--                error: function() {-->
+<!--                    alert("에러발생");-->
+<!--                }-->
+<!--            });-->
+<!--        }-->
+
+</script>
 </html>
