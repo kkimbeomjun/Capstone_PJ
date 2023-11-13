@@ -1,19 +1,107 @@
 package LicenseProject.License.controller;
 
 import LicenseProject.License.dto.MemberDTO;
+import LicenseProject.License.entity.MemberEntity;
+import LicenseProject.License.repository.MemberRepository;
 import LicenseProject.License.service.MemberService;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
+import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.lang.reflect.Member;
+import java.security.SecureRandom;
+
+
+import java.security.Security;
+import java.util.Base64;
+import java.util.Optional;
+import java.util.Random;
+
+
 
 @Controller
 @RequiredArgsConstructor
 public class MemberController {
+
+
     // 생성자 주입 자동적으로 만들어 준다
     private final MemberService memberService;
+    @Autowired
+    private MemberRepository memberRepository;
+
+    @GetMapping("generateRandomMixedValue")
+    public String generateRandomMixedValue(Model model, HttpSession session){
+        String userEmail = (String) session.getAttribute("loginEmail");
+
+        if (userEmail == null){
+
+
+
+            return "main";
+        }
+
+        Optional<MemberEntity> existingMember = memberRepository.findByMemberEmail(userEmail);
+        if (existingMember.isPresent() && existingMember.get().getRandomMixedValue() != null){
+            String message = "이미 구독중 입니다";
+            model.addAttribute("message",message);
+            return "sub";
+        }
+
+        String randomValue = memberService.generateAndSaveRandomValue(userEmail);
+
+        model.addAttribute("randomValue",randomValue);
+
+        String message = "구독 완료";
+        model.addAttribute("message",message);
+
+        return "sub";
+    }
+
+//    @GetMapping("generateRandomMixedValue")
+//    public String generateRandomMixedValue(Model model, HttpSession session){
+//        String userEmail = (String) session.getAttribute("loginEmail");
+//
+//        if (userEmail == null){
+//            return "redirect:/member/login";
+//        }
+//
+//        String randomValue = memberService.generateAndSaveRandomValue(userEmail);
+//
+//        model.addAttribute("randomValue",randomValue);
+//
+//        return "main";
+//    }
+
+//    @GetMapping("/member/subscribe")
+//    public String subscribe(Model model, HttpSession session){
+//        String userEmail = (String) session.getAttribute("loginEmail");
+//
+//        MemberEntity existingMember = memberRepository.findByMemberEmail(userEmail);
+//
+//        if (existingMember !=null && existingMember.getRandomMixedValue() !=null){
+//
+//            model.addAttribute("message","이무 구독하셨습니다");
+//            return "main";
+//        }
+//
+//        String randomValue = generateRandomMixedValue();
+//        MemberEntity memberEntity = new MemberEntity();
+//        memberEntity.setMemberEmail(userEmail);
+//        memberEntity.setRandomMixedValue(randomValue);
+//        memberRepository.save(memberEntity);
+//
+//        model.addAttribute("message","구독이 완료되었습니다. 생성된 키값 : " + randomValue);
+//        return "main";
+//    }
+
 
     //회원가입 페이지 출력 요청
     @GetMapping("/member/save")
@@ -29,6 +117,12 @@ public class MemberController {
         memberService.save(memberDTO);
 
         return "index";
+    }
+
+    @GetMapping("/member/sub")
+    public String sub()
+    {
+        return "sub";
     }
 
 
@@ -56,6 +150,9 @@ public class MemberController {
         memberService.update(memberDTO);
         return "redirect:/";
     }
+
+
+
 
     @GetMapping("/member/logout")
         public String logout(HttpSession session){
@@ -85,6 +182,8 @@ public class MemberController {
         boolean isUnique = memberService.isEmailUnique(memberEmail);
         return ResponseEntity.ok(isUnique);
     }
+
+
 
 }
 

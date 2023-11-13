@@ -53,7 +53,8 @@ top: 127px;
 position: absolute;
 color: black;
 font-size: 30px;
-font-family: Inria Sans;
+font-family: 'Archivo', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
 font-weight: 400;
 word-wrap: break-word
 }
@@ -66,7 +67,8 @@ top: 207px;
 position: absolute;
 color: black;
 font-size: 25px;
-font-family: Inria Sans;
+font-family: 'Archivo', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
 font-weight: 400;
 word-wrap: break-word
 }
@@ -79,21 +81,22 @@ top: 495px;
 position: absolute;
 color: #A9A9A9;
 font-size: 14px;
-font-family: Inria Sans;
+  font-family: 'Noto Sans KR', sans-serif;
 font-weight: 400;
 text-decoration: underline;
 word-wrap: break-word
 }
 
 .Ninja{
-width: 162px;
-height: 63px;
+ font-family: 'Archivo', sans-serif;
+ font-family: 'Noto Sans KR', sans-serif;
+ width: 162px;
+ height: 63px;
  left: 191px;
  top: -2px;
  position: absolute;
  color: black;
  font-size: 52px;
- font-family: Fredoka One;
  font-weight: 400;
 word-wrap: break-word
 
@@ -125,7 +128,7 @@ word-wrap: break-word
     position: absolute;
     color: #A9A9A9;
     font-size: 25px;
-    font-family: Inria Sans;
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
     word-wrap: break-word;
 }
@@ -138,7 +141,7 @@ word-wrap: break-word
  position: absolute;
  color: black;
  font-size: 25px;
- font-family:
+  font-family: 'Noto Sans KR', sans-serif;
   Inria Sans;
   font-weight: 400;
   word-wrap: break-word
@@ -153,7 +156,8 @@ word-wrap: break-word
     position: absolute;
     color: black;
     font-size: 25px;
-    font-family: Inria Sans;
+   font-family: 'Archivo', sans-serif;
+   font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
     word-wrap: break-word;
 }
@@ -167,7 +171,8 @@ word-wrap: break-word
     position: absolute;
     color: #A9A9A9;
     font-size: 25px;
-    font-family: Inria Sans;
+    font-family: 'Archivo', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
     word-wrap: break-word;
 }

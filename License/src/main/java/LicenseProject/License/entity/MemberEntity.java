@@ -4,6 +4,7 @@ package LicenseProject.License.entity;
 import LicenseProject.License.dto.MemberDTO;
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -11,6 +12,7 @@ import lombok.ToString;
 @Setter
 @Getter
 @Table(name = "member_table")
+@NoArgsConstructor
 public class MemberEntity {
     @Id //pk 지정
     @GeneratedValue(strategy = GenerationType.IDENTITY) // auto
@@ -21,6 +23,9 @@ public class MemberEntity {
 
     @Column
     private String memberPassword;
+
+    @Column
+    private String randomMixedValue;
 
     public static MemberEntity toMemberEntity(MemberDTO memberDTO){
         MemberEntity memberEntity = new MemberEntity();

@@ -26,11 +26,14 @@ public class MemberDTO {
     @Pattern(regexp = "^(?=.*\\d)(?=.*[a-zA-Z])[0-9a-zA-Z]{8,16}",
             message = "비밀번호는 영문과 숫자 조합으로 8 ~ 16자리까지 가능합니다.")
     private String memberPassword;
+
+    private String randomValue;
     public static MemberDTO toMemberDTO(MemberEntity memberEntity){
         MemberDTO memberDTO = new MemberDTO();
         memberDTO.setId(memberEntity.getId());
         memberDTO.setMemberEmail(memberEntity.getMemberEmail());
         memberDTO.setMemberPassword(memberEntity.getMemberPassword());
+        memberDTO.setRandomValue(memberEntity.getRandomMixedValue());
         return memberDTO;
     }
 }

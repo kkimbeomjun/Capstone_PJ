@@ -8,6 +8,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Member;
+import java.security.SecureRandom;
+import java.util.Base64;
 import java.util.Optional;
 
 @Service
@@ -76,8 +78,29 @@ public class MemberService {
     }
 
 
+    public String generateAndSaveRandomValue(String userEmail) {
 
+        String randomValue = generateRandomMixedValue();
 
+        updaeRamvalue(userEmail,randomValue);
 
+        return randomValue;
+    }
+
+    private void updaeRamvalue(String userEmail, String randomValue) {
+
+        Optional<MemberEntity> optionalMember = memberRepositoy.findByMemberEmail(userEmail);
+
+        optionalMember.ifPresent(member ->{
+            member.setRandomMixedValue(randomValue);
+            memberRepositoy.save(member);
+
+        });
+    }
+    private String generateRandomMixedValue() {
+        byte[] randomBytes = new byte[16];
+        new SecureRandom().nextBytes(randomBytes);
+        return Base64.getEncoder().encodeToString(randomBytes);
+    }
 
 }

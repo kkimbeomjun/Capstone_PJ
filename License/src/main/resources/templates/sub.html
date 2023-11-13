@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>구독창</title>
+</head>
+<body>
+<div class="1" style="width: 1920px; height: 1080px; position: relative; background: rgba(0, 0, 0, 0)">
+
+  <div class="Rectangle2" style="width: 1920px; height: 1080px; left: 0px; top: -5px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)"></div>
+  <div class="Group1" style="width: 453px; height: 568px; left: 740px; top: 274px; position: absolute">
+    <div class="Rectangle1" style="width: 453px; height: 568px; left: 0px; top: 0px; position: absolute; background: #F9F9F9; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); border-radius: 20px"></div>
+    <div class="Free" style="width: 104px; left: 282px; top: 228px; position: absolute; color: #053B50; font-size: 40px; font-family: Fredoka One; font-weight: 400; word-wrap: break-word">FREE</div>
+    <div th:if ="${message}" class="1" style="width: 161px; left: 54px; top: 243px; position: absolute; color: black; font-size: 16px; font-family: Inria Sans; font-weight: 400; word-wrap: break-word"><p th:text="${message}" style="color: red;"></div>
+    <div style="width: 205px; left: 55px; top: 86px; position: absolute; color: black; font-size: 16px; font-family: Inria Sans; font-weight: 400; word-wrap: break-word">최고의 라이센스 관리 시스템</div>
+    <div class="ButtonLogin" style="width: 355px; height: 83px; left: 50px; top: 414px; position: absolute">
+      <div class="InputPassword" style="width: 355px; height: 83px; left: 0px; top: 0px; position: absolute; background: #053B50; border-radius: 7px"></div>
+      <button th:onclick="|location.href='/generateRandomMixedValue'|"
+              style="width: 220px; height: 59px; left: 57px; top: 24px; position: absolute; text-align: center; color: white; font-size: 32px; font-family: Fredoka One; font-weight: 400; word-wrap: break-word">구독하기</button>
+    </div>
+    <div class="Ninja" style="width: 344px; left: 43px; top: 26px; position: absolute; color: #053B50; font-size: 40px; font-family: Fredoka One; font-weight: 400; word-wrap: break-word">NinJa</div>
+  </div>
+  <div style="left: 31px; top: 220px; position: absolute; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">회원정보 관리</div>
+  <div style="left: 31px; top: 274px; position: absolute; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">라이센스 관리</div>
+  <div style="left: 31px; top: 160px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 30px; word-wrap: break-word">마이페이지</div>
+  <div class="Frame57" style="width: 1920px; height: 83px; left: 7px; top: -10px; position: absolute; background: white">
+    <div style="left: 173px; top: 31px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">서비스<br/></div>
+    <div style="width: 56px; height: 28px; left: 267px; top: 31px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">제품</div>
+    <div class="Ninja" style="width: 344px; left: 29px; top: 13px; position: absolute; color: #053B50; font-size: 40px; font-family: Fredoka One; font-weight: 400; word-wrap: break-word">NINJA</div>
+    <div style="left: 1648px; top: 41px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">로그아웃</div>
+  </div>
+  <div style="left: 1759px; top: 31px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">
+    <p th:text="${session.loginEmail}"></p></div></a>
+  </div>
+  <div class="Line6" style="width: 240.01px; height: 0px; left: 17px; top: 202.25px; position: absolute; border: 1px black solid"></div>
+</div>
+</body>
+</html>
