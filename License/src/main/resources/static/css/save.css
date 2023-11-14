@@ -18,11 +18,19 @@ width: 162px; height: 63px; left: 193px; top: 0px; position: absolute; color: bl
 width: 422px; height: 71px; left: 63px; top: 612px; position: absolute; background: #DBDADC; border-radius: 5px
 }
 
-.password1{
+.passwords{
 width: 357px; height: 33px; left: 64px; top: 386px; position: absolute; color:
 #A9A9A9; font-size: 20px; font-family: Inria Sans; font-weight: 400; word-wrap: break-word
 }
-.password2{
+.passwords1{
 width: 357px; height: 33px; left: 65px; top: 494px; position: absolute;
 color: #A9A9A9; font-size: 20px; font-family: Inria Sans; font-weight: 400; word-wrap: break-word
 }
+
+.password{
+        width: 15em;
+        height: 2em;
+       border: none;
+       F9F9F9
+       }
+
