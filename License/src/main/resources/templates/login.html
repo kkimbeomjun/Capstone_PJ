@@ -9,7 +9,7 @@
 </head>
 <body>
 <form action = "/member/login" method="post">
-<div class="background">
+
   <div class="Frame51">
     <div class="Rectangle1"></div>
     <div class="Rectangle19"></div>
@@ -17,13 +17,16 @@
     <div class ="email">이메일</div>
     <div class = "next"><input type = "submit" value="다음"></div>
     <div class="Line3"></div>
-    <div class = "emails"><input type="text" name = "memberEmail" placeholder="이메일을 입력해주세요"></div>
+    <div class = "emails">
+      <input type="text" name = "memberEmail" placeholder="이메일을 입력해주세요"
+      style="width: 15em; height: 2em; border: none; background-color: #F9F9F9;"></div>
     <div class = "password">비밀번호</div>
     <div class="Line4"></div>
-    <div class ="passwords"><input type="password" name = "memberPassword" placeholder="비밀번호를 입력해주세요"></div>
+    <div class ="passwords"><input type="password" name = "memberPassword"
+                                   placeholder="비밀번호를 입력해주세요"  style="width: 15em; height: 2em; border: none; background-color: #F9F9F9;"></div>
     <div class="Ninja">NINJA</div>
-    <a href="/member/save"><div class = "singUp">회원가입</div></a>
-  </div>
+    <div class = "singUp"><a href="/member/save">회원가입</a></div>
+
 </div>
 </form>
 </body>
