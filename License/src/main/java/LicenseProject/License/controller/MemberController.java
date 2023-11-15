@@ -116,7 +116,7 @@ public class MemberController {
         System.out.println("memberDTO = " + memberDTO);
         memberService.save(memberDTO);
 
-        return "index";
+        return "login";
     }
 
     @GetMapping("/member/sub")

@@ -10,8 +10,27 @@
 width: 416.50px; height: 0px; left: 68px; top: 310px; position: absolute; border: 2px black solid
 }
 
+.archivoFont {
+    font-family: 'Archivo', sans-serif;
+}
+
+/* Noto Sans KR 폰트 클래스 */
+.notoFont {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
 .Ninja{
-width: 162px; height: 63px; left: 193px; top: 0px; position: absolute; color: black; font-size: 52px; font-family: Fredoka One; font-weight: 400; word-wrap: break-word
+width: 162px;
+height: 63px;
+left: 193px;
+top: 0px;
+position: absolute;
+color: black;
+font-size: 52px;
+font-family: 'Archivo', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+font-weight: 400;
+word-wrap: break-word
 }
 
 .Rectangle19{
@@ -40,3 +59,180 @@ a {
   text-decoration: none;
 }
 
+.Rectangle1 {
+    width: 513px;
+    height: 644px;
+    left: 18px;
+    top: 81px;
+    position: absolute;
+    background: #F9F9F9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.emailStart {
+    width: 357px;
+    height: 38px;
+    left: 68px;
+    top: 127px;
+    position: absolute;
+    color: black;
+    font-size: 30px;
+    font-family: 'Archivo', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.email {
+    width: 357px;
+    height: 38px;
+    left: 68px;
+    top: 207px;
+    position: absolute;
+    color: black;
+    font-size: 25px;
+    font-family: 'Archivo', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.checkResult {
+    font-size: 10px;
+}
+
+.emailInputContainer {
+    width: 417px;
+    height: 55px;
+    left: 66px;
+    top: 265px;
+    position: absolute;
+    color: #A9A9A9;
+    font-size: 30px;
+    font-family: 'Archivo', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    overflow-wrap: word-wrap; /* 또는 word-wrap: break-word; */
+    overflow: hidden;
+}
+
+.submitButtonContainer {
+    width: auto;
+    height: 30px;
+    left: 215px;
+    top: 632px;
+    position: absolute;
+    color: black;
+    font-size: 25px;
+    font-weight: 400;
+    font-family: 'Archivo', sans-serif;
+        font-family: 'Noto Sans KR', sans-serif;
+    overflow-wrap: break-word; /* 또는 word-wrap: break-word; */
+}
+
+.submitButtonContainer input {
+    left: 280px;
+    width: auto;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    font-family: 'Archivo', sans-serif;
+        font-family: 'Noto Sans KR', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.passwordLabel {
+    width: 84px;
+    height: 20px;
+    left: 64px;
+    top: 340px;
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    font-family: 'Archivo', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.passwordHint {
+    font-size: 10px;
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.Line4 {
+    width: 422px;
+    height: 0px;
+    left: 63px;
+    top: 422.60px;
+    position: absolute;
+    border: 1px black solid;
+}
+
+.passwords {
+    width: 357px;
+    height: 33px;
+    left: 64px;
+    top: 386px;
+    position: absolute;
+    color: #A9A9A9;
+    font-size: 20px;
+    font-family: 'Archivo', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+#password {
+    width: 15em;
+    height: 2em;
+    border: none;
+    background-color: #F9F9F9;
+}
+
+.passwordConfirmLabel {
+    width: 154px;
+    height: 30px;
+    left: 65px;
+    top: 448px;
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    font-family: 'Archivo', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.Line5 {
+    width: 419px;
+    height: 0px;
+    left: 64px;
+    top: 530px;
+    position: absolute;
+    border: 1px black solid;
+}
+
+.passwords1 {
+    width: 357px;
+    height: 33px;
+    left: 65px;
+    top: 494px;
+    position: absolute;
+    color: #A9A9A9;
+    font-size: 20px;
+    font-family: 'Archivo', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+#password1 {
+    width: 15em;
+    height: 2em;
+    border: none;
+    background-color: #F9F9F9;
+}
