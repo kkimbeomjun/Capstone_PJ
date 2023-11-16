@@ -1,0 +1,274 @@
+.ButtonLogin {
+    width: 355px;
+    height: 83px;
+    left: 50px;
+    top: 414px;
+    position: absolute;
+}
+
+.InputPassword {
+    width: 355px;
+    height: 83px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: #053B50;
+    border-radius: 7px;
+}
+
+.SubscribeText {
+    width: 220px;
+    height: 59px;
+    left: 57px;
+    top: 24px;
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    font-family: Fredoka One;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.Rectangle1 {
+    width: 453px;
+    height: 568px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: #F9F9F9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.Free {
+      width: auto;
+     left: 282px;
+     top: 228px;
+     position: absolute;
+     color: #053B50;
+     font-size: 40px;
+     font-family: 'Gothic A1', sans-serif;
+     font-weight: 400;
+     word-wrap: break-word;
+     /* 추가된 스타일 */
+     white-space: nowrap; /* 글자가 너무 길면 줄 바꿈 대신 한 줄에 모두 표시 */
+     overflow: hidden; /* 넘치는 부분은 숨김 */
+     text-overflow: ellipsis; /* 넘치는 부분을 생략 부호(...)로 표시 */
+}
+
+.UserDescription {
+    width: 161px;
+    left: 54px;
+    top: 243px;
+    position: absolute;
+    color: black;
+    font-size: 16px;
+    font-family: 'Orbit', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.LicenseSystemDescription {
+    width: 205px;
+    left: 55px;
+    top: 86px;
+    position: absolute;
+    color: black;
+    font-size: 16px;
+    font-family: 'Orbit', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.li {
+    width: 205px;
+    left: 55px;
+    top: 86px;
+    position: absolute;
+    color: black;
+    font-size: 16px;
+    font-family: 'Orbit', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.NinjaTitle {
+    width: 344px;
+    left: 43px;
+    top: 26px;
+    position: absolute;
+    color: #053B50;
+    font-size: 40px;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.Group1 {
+    width: 453px;
+    height: 568px;
+    left: 229px;
+    top: 241px;
+    position: absolute;
+}
+
+/* CSS */
+.Rectangle2 {
+    width: 453px;
+    height: 568px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: #F9F9F9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.Free1 {
+ width: auto;
+   left: 282px;
+   top: 228px;
+   position: absolute;
+   color: #053B50;
+   font-size: 40px;
+   font-family: 'Gothic A1', sans-serif;
+   font-weight: 400;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+.LicenseSystemDescription1 {
+         width: 161px;
+         left: 54px;
+         top: 243px;
+         position: absolute;
+         color: black;
+         font-size: 16px;
+         font-family: 'Orbit', sans-serif;
+         font-weight:400;
+         word-wrap: break-word;
+
+}
+
+
+.ButtonLogin22 {
+    width: 355px;
+    height: 83px;
+    left: 50px;
+    top: 414px;
+    position: absolute;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+.ButtonLogin22 .InputPassword22 {
+    width: 355px;
+    height: 83px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: #053B50;
+    border-radius: 7px;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+.button1 {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    font-family: 'Gothic A1', sans-serif;
+    margin-top: -13px;
+}
+
+.ButtonLogin22 button {
+    width: 220px;
+    height: 59px;
+    left: 57px;
+    top: 24px;
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    font-family: Fredoka One;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.Ninja1 {
+    width: 344px;
+    left: 43px;
+    top: 26px;
+    position: absolute;
+    color: #053B50;
+    font-size: 40px;
+    font-family: 'Gothic A1', sans-serif;
+
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+/* 공통 스타일 */
+.menu-item {
+    position: absolute;
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: 600;
+    line-height: 14px;
+    word-wrap: break-word;
+}
+
+/* 서비스 */
+.menu-item.service {
+    left: 173px;
+    top: 31px;
+    color: black;
+}
+
+/* 제품 */
+.menu-item.product {
+    width: 56px;
+    height: 28px;
+    left: 267px;
+    top: 31px;
+    color: black;
+}
+
+.Ninja3 {
+    width: 344px;
+    left: 29px;
+    top: 11px;
+    position: absolute;
+    color: #053B50;
+    font-size: 40px;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+/* 로그아웃 */
+.menu-item.logout {
+    left: 1223px;
+    top: 34px;
+    color: black;
+}
+
+/* 로그인 이메일 */
+.menu-item.login-email {
+    left: 1330px;
+    top: 34px;
+    color: black;
+}
+
+.Frame57{
+    width: 1472px;
+    height: 83px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: white
+}
+
