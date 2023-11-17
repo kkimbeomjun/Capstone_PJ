@@ -10,12 +10,19 @@ import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.Resource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import org.springframework.http.MediaType;
+import java.io.IOException;
 import java.lang.reflect.Member;
 import java.security.SecureRandom;
 
@@ -38,69 +45,27 @@ public class MemberController {
     private MemberRepository memberRepository;
 
     @GetMapping("generateRandomMixedValue")
-    public String generateRandomMixedValue(Model model, HttpSession session){
+    public String generateRandomMixedValue(Model model, HttpSession session,@RequestParam("months") int months){
         String userEmail = (String) session.getAttribute("loginEmail");
 
         if (userEmail == null){
-
-
-
             return "main";
         }
-
         Optional<MemberEntity> existingMember = memberRepository.findByMemberEmail(userEmail);
+
         if (existingMember.isPresent() && existingMember.get().getRandomMixedValue() != null){
             String message = "이미 구독중 입니다";
             model.addAttribute("message",message);
             return "sub";
         }
-
-        String randomValue = memberService.generateAndSaveRandomValue(userEmail);
-
+        String randomValue = memberService.generateAndSaveRandomValueWithExpiration(userEmail,months);
         model.addAttribute("randomValue",randomValue);
 
-        String message = "구독 완료";
-        model.addAttribute("message",message);
 
+        String message = months + "달 구독 완료";
+        model.addAttribute("message",message);
         return "sub";
     }
-
-//    @GetMapping("generateRandomMixedValue")
-//    public String generateRandomMixedValue(Model model, HttpSession session){
-//        String userEmail = (String) session.getAttribute("loginEmail");
-//
-//        if (userEmail == null){
-//            return "redirect:/member/login";
-//        }
-//
-//        String randomValue = memberService.generateAndSaveRandomValue(userEmail);
-//
-//        model.addAttribute("randomValue",randomValue);
-//
-//        return "main";
-//    }
-
-//    @GetMapping("/member/subscribe")
-//    public String subscribe(Model model, HttpSession session){
-//        String userEmail = (String) session.getAttribute("loginEmail");
-//
-//        MemberEntity existingMember = memberRepository.findByMemberEmail(userEmail);
-//
-//        if (existingMember !=null && existingMember.getRandomMixedValue() !=null){
-//
-//            model.addAttribute("message","이무 구독하셨습니다");
-//            return "main";
-//        }
-//
-//        String randomValue = generateRandomMixedValue();
-//        MemberEntity memberEntity = new MemberEntity();
-//        memberEntity.setMemberEmail(userEmail);
-//        memberEntity.setRandomMixedValue(randomValue);
-//        memberRepository.save(memberEntity);
-//
-//        model.addAttribute("message","구독이 완료되었습니다. 생성된 키값 : " + randomValue);
-//        return "main";
-//    }
 
 
     //회원가입 페이지 출력 요청
@@ -183,6 +148,53 @@ public class MemberController {
         return ResponseEntity.ok(isUnique);
     }
 
+    @GetMapping("/member/download")
+    public String download(){
+        return "download";
+
+    }
+
+    @GetMapping("/download")
+    public ResponseEntity<Resource> downloadFile() throws IOException {
+        String filePath = "C:\\Users\\JUN\\Desktop\\study\\spring.zip"; // 예시 경로
+
+        // 파일 resource 읽기
+        Resource resource = new FileSystemResource(filePath);
+        MediaType mediaType = new MediaType("application", "zip");
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + resource.getFilename());
+
+        return ResponseEntity.ok()
+                .headers(headers)
+                .contentLength(resource.contentLength())
+                .contentType(mediaType)
+                .body(resource);
+    }
+
+    @GetMapping("/member/downloadmain")
+    public String downloadmain(){
+        return "downloadmain";
+
+    }
+
+    @GetMapping("/downloadmain")
+    public ResponseEntity<Resource> downloadFile1() throws IOException {
+        String filePath = "C:\\Users\\JUN\\Desktop\\study\\spring.zip"; // 예시 경로
+
+        // 파일 resource 읽기
+        Resource resource = new FileSystemResource(filePath);
+        MediaType mediaType = new MediaType("application", "zip");
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + resource.getFilename());
+
+        return ResponseEntity.ok()
+                .headers(headers)
+                .contentLength(resource.contentLength())
+                .contentType(mediaType)
+                .body(resource);
+    }
 
 
 }

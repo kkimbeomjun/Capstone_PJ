@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -16,23 +18,26 @@
   <div class="Group1">
     <div class="Rectangle1"></div>
     <div class="Free">FREE</div>
-    <div class="UserDescription">사용자 1명 기준 첫 해</div>
-    <div class="LicenseSystemDescription">최고의 라이센스 관리 시스템</div>
+    <div class="UserDescription" th:if ="${message}">
+      <p th:text="${message}" style="color: red;"></div>
+    <div class="LicenseSystemDescription">최고의 라이센스 관리 시스템
+    <br>1달 구독하기!</div>
     <div class="ButtonLogin">
       <div class="InputPassword"></div>
-      <div class="SubscribeText">구독하기</div>
+      <button class="button2" th:onclick="|location.href='/generateRandomMixedValue?months=1'|">구독하기</button>
     </div>
     <div class="NinjaTitle">NinJa</div>
   </div>
+  <!-- 오른쪽 구독 처리 -->
   <div class="Group2" style="width: 453px; height: 568px; left: 824px; top: 241px; position: absolute">
     <div class="Rectangle2"></div>
     <div class="Free1">FREE</div>
-    <div class="LicenseSystemDescription1" th:if ="${message}">사용자 1명 기준 첫 해
-      <br><p th:text="${message}" style="color: red;"></div>
-    <div class="li">최고의 라이센스 관리 시스템</div>
+    <div class="LicenseSystemDescription1" th:if ="${message}">
+      <p th:text="${message}" style="color: red;"></div>
+    <div class="li">최고의 라이센스 관리 시스템<br>3달 구독하기!</div>
     <div class="ButtonLogin22">
       <div class="InputPassword22"></div>
-      <button class = "button1" th:onclick="|location.href='/generateRandomMixedValue'|">구독하기</button>
+      <button class="button1" th:onclick="|location.href='/generateRandomMixedValue?months=3'|">구독하기</button>
     </div>
     <div class="Ninja1">NinJa</div>
   </div>
@@ -44,7 +49,9 @@
     <!-- NINJA -->
     <div class="Ninja3">NINJA</div>
     <!-- 로그아웃 -->
-    <div class="menu-item logout">로그아웃</div>
+    <div class="menu-item logout">
+      <a href="/member/logout">로그아웃</a>
+    </div>
     <!-- 로그인 이메일 -->
     <div class="menu-item login-email" th:text="${session.loginEmail}"></div>
   </div>

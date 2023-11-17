@@ -1,10 +1,22 @@
-
 body {
     font-family: 'Inria Sans', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #EEEEEE;
 }
+
+@media screen and (max-width: 768px) {
+    /* 화면이 768px 이하일 때 적용되는 스타일 */
+    Frame51{
+         width: 60%;
+    }
+
+    body {
+        width: 60%;
+        font-size: 14px;
+    }
+}
+
 
 .background {
 width: 100%;
@@ -133,17 +145,31 @@ word-wrap: break-word
 }
 
 .next {
- width: 59px;
- height: 30px;
- left: 248px;
- top: 632px;
- position: absolute;
- color: black;
- font-size: 25px;
+  width: 150px; /* 더 크게 조절 가능 */
+  height: 50px; /* 더 크게 조절 가능 */
+  left: 192px;
+  /*top: 632px;*/
+  top: 615px;
+  position: absolute;
+  color: black;
+  font-size: 40px;
+  font-family: 'Archivo', sans-serif;
   font-family: 'Noto Sans KR', sans-serif;
-  Inria Sans;
-  font-weight: 400;
-  word-wrap: break-word
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.next input {
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  font-family: 'Archivo', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  background: transparent; /* 배경을 투명하게 설정하여 겹치게 만듭니다. */
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
 /* 비밀번호 입력란 스타일 */

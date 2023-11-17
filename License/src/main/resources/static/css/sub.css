@@ -1,11 +1,16 @@
+
+a {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: black;
+  text-decoration: none;
+}
 .ButtonLogin {
     width: 355px;
     height: 83px;
     left: 50px;
     top: 414px;
-    position: absolute;
+    position: relative;
 }
-
 .InputPassword {
     width: 355px;
     height: 83px;
@@ -14,6 +19,19 @@
     position: absolute;
     background: #053B50;
     border-radius: 7px;
+}
+.button2 {
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    font-family: Fredoka One;
+    font-weight: 400;
+    word-wrap: break-word;
+    left: 100px; /* 원하는 위치로 조절 */
+    top: 19px;   /* 원하는 위치로 조절 */
+    background: none; /* 배경 제거 */
+     border: none; /* 네모난 틀을 없애기 위해 border 속성 추가 */
 }
 
 .SubscribeText {

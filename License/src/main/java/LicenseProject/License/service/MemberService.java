@@ -9,12 +9,16 @@ import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Member;
 import java.security.SecureRandom;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.Base64;
 import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
 public class MemberService {
+
+
     private final MemberRepository memberRepositoy;
     public void save(MemberDTO memberDTO) {
         // 1. dto -> entity 변환
@@ -78,16 +82,36 @@ public class MemberService {
     }
 
 
-    public String generateAndSaveRandomValue(String userEmail) {
+    public String generateAndSaveRandomValueWithExpiration(String userEmail, int months) {
 
         String randomValue = generateRandomMixedValue();
 
-        updaeRamvalue(userEmail,randomValue);
+        LocalDateTime expirationTime = LocalDateTime.now().plus(months,ChronoUnit.MONTHS);
+
+        saveRandomValueWithExpiration(userEmail,randomValue,expirationTime);
 
         return randomValue;
     }
 
-    private void updaeRamvalue(String userEmail, String randomValue) {
+
+    public String generateAndSaveRandomValue(String userEmail){
+        return generateAndSaveRandomValueWithExpiration(userEmail,3);
+
+    }
+
+    private void saveRandomValueWithExpiration(String userEmail, String randomValue, LocalDateTime expirationTime) {
+        MemberEntity memberEntity = memberRepositoy.findByMemberEmail(userEmail)
+                .orElseThrow(() -> new RuntimeException("Member no found"));
+
+        memberEntity.setRandomMixedValue(randomValue);
+        memberEntity.setSubscriptionExpirationTime(expirationTime);
+
+        memberRepositoy.save(memberEntity);
+
+    }
+
+
+    private void updateRandomValue(String userEmail, String randomValue) {
 
         Optional<MemberEntity> optionalMember = memberRepositoy.findByMemberEmail(userEmail);
 

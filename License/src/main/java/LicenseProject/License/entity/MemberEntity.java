@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Setter
 @Getter
@@ -26,6 +28,12 @@ public class MemberEntity {
 
     @Column
     private String randomMixedValue;
+
+    @Column(nullable = false)
+    private int subscriptionMonths;
+
+    @Column
+    private LocalDateTime subscriptionExpirationTime;
 
     public static MemberEntity toMemberEntity(MemberDTO memberDTO){
         MemberEntity memberEntity = new MemberEntity();

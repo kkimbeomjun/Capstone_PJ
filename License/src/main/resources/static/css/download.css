@@ -1,0 +1,183 @@
+.ButtonLogin {
+  width: 351.05px;
+  height: 76.72px;
+  left: 50px;
+  top: 279px;
+  position: absolute;
+}
+
+a {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: black;
+  text-decoration: none;
+}
+
+.InputPassword {
+  width: 351.05px;
+  height: 76.72px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  background: #053B50;
+  border-radius: 7px;
+}
+
+.DownloadButton {
+  width: 217.55px;
+  height: 54.53px;
+  left: 67px;
+  top: 22px;
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-family: Fredoka One;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.DownloadButton a {
+  color: white;
+  text-decoration: none;
+}
+.Rectangle1 {
+  width: 1277px;
+  height: 525px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  background: #F9F9F9;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.NinjaClientesLicense,
+.NinjaClientes,
+.LicenseSystem {
+  width: 1076px;
+  position: absolute;
+  font-size: 25px;
+  font-family: Inria Sans;
+  font-weight: 400;
+  word-wrap: break-word;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.NinjaClientesLicense {
+  height: 90px;
+  top: 407px;
+  left: 50px;
+  color: black;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.NinjaClientes {
+  height: 90px;
+  top: 189px;
+  left: 50px;
+  color: black;
+}
+
+.LicenseSystem {
+  height: 17.56px;
+  top: 87px;
+  left: 50px;
+  color: black;
+  font-size: 16px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.Group1 {
+    width: 1277px;
+    height: 525px;
+    left: 98px;
+    top: 244px;
+    position: absolute
+}
+
+
+.NinjaCl {
+  width: 969.73px;
+  height: 44.37px;
+  left: 50px;
+  top: 125px;
+  position: absolute;
+  color: #053B50;
+  font-size: 40px;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.Frame57 {
+    width: 1472px;
+    height: 83px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: white;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.Frame57 .serviceLabel {
+    left: 173px;
+    top: 31px;
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    line-height: 14px;
+    word-wrap: break-word;
+}
+
+.Frame57 .productLabel {
+    width: 56px;
+    height: 28px;
+    left: 267px;
+    top: 31px;
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    line-height: 14px;
+    word-wrap: break-word;
+}
+
+.Frame57 .Ninja {
+    width: 344px;
+    left: 29px;
+    top: 11px;
+    position: absolute;
+    color: #053B50;
+    font-size: 40px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.Frame57 .logoutLabel {
+    left: 1223px;
+    top: 34px;
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Fredoka', sans-serif;
+    line-height: 14px;
+    word-wrap: break-word;
+}
+
+.Frame57 .loginSignupLabel {
+    left: 1330px;
+    top: 34px;
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 14px;
+    word-wrap: break-word;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
