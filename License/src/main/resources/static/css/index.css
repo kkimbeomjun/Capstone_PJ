@@ -1,8 +1,25 @@
+
+
+.Rectangle17{
+      padding-top: 0;
+      padding-bottom: 0.4%;
+      object-fit: contain;
+      background-color: rgba(0, 0, 0, 0);
+
+}
+
+.Rectangle18{
+top: 803px;
+position: absolute;
+background: #F5F5F5;
+
+}
+
 .NINJA{
     font-family: 'Archivo', sans-serif;
     font-family: 'Noto Sans KR', sans-serif;
-    width: 344px; left: 10px;
-    top: 11px;
+    padding-top: 0%;
+    padding-left: 1%;
     position: absolute;
     color: #053B50; font-size: 40px;
     font-family: Fredoka One;
@@ -17,9 +34,9 @@ a {
 }
 
 .HeroWrapperText {
-    padding-top: 59px;
-    left: 147px;
-    top: 216.50px;
+    padding-top: 9.8%;
+    padding-left: 8.9%;
+
     position: absolute;
     flex-direction: column;
     justify-content: flex-start;
@@ -262,20 +279,21 @@ a {
 }
 
 .Group21{
-    width: 1170px;
-    height: 308px;
+     margin:auto;
+      width : 50%;
     left: 154px;
     top: 303px;
     position: absolute;
 }
 
 .NinjaNinjaLicense {
-  width: 1478px;
-  height: 281px;
-  left: 86px;
-  top: 1027px;
-  position: absolute;
-  text-align: center;
+
+       padding-left: 34%;
+       padding-right: 34%;
+
+   top: 1027px;
+   position: absolute;
+   text-align: center
 }
 
 .NewFeatureTitle {
@@ -557,11 +575,14 @@ border-radius: 10px;
 }
 
 .Process{
-width: 1475px;
-height: 652px;
-left: 88px;
-top: 1552px;
-position: absolute;
+    padding-right: 100%;
+    padding-left: 0%;
+    padding-top: 30%;
+    top: 1552px;
+    position: absolute;
+    background-color: white;
+        padding-bottom: 25%;
+
 }
 
 .NotificationReminder {
@@ -621,32 +642,30 @@ position: absolute;
 }
 
 .Frame57 {
-  width: 1644px;
-  height: 83px;
-  left: 6px;
-  top: 0px;
+  top: 0%;
+  left: 0%;
+  width: 3.8%;
+  height: 100%;
   position: absolute;
   background: white;
    z-index: 1;
 }
 
 .ServiceLabel {
-  left: 173px;
-  top: 31px;
-  position: absolute;
-  color: black;
-  font-size: 20px;
-  font-family: Inter;
-  font-weight: 600;
-  line-height: 14px;
-  word-wrap: break-word;
+padding-left: 8.1%;
+    padding-top: 0.8%;
+position: absolute;
+color: black;
+font-size: 20px;
+font-family: Inter;
+font-weight: 600;
+line-height: normal;
+word-wrap: break-word
 }
 
 .ProductLabel {
-  width: 56px;
-  height: 28px;
-  left: 267px;
-  top: 31px;
+  padding-top: 1%;
+  padding-left: 12.5%;
   position: absolute;
   color: black;
   font-size: 20px;
@@ -659,8 +678,9 @@ position: absolute;
 
 
 .LoginLink {
-  left: 1531px;
-  top: 35px;
+  padding-bottom : 20.9%;
+  padding-top: 1%;
+  padding-left: 92.8%;
   position: absolute;
   color: black;
   font-size: 20px;
