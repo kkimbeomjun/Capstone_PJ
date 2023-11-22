@@ -67,6 +67,11 @@ public class MemberController {
         return "sub";
     }
 
+    @GetMapping("/member/main")
+        public String mainForm(){
+        return "main";
+
+    }
 
     //회원가입 페이지 출력 요청
     @GetMapping("/member/save")

@@ -9,14 +9,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div style="width: 1472px; height: 1013px; position: relative; background: #EEEEEE">
+<div style="width: 100vw; margin-top: 78px;
+    height: 100vh; position: relative; background: #EEEEEE">
   <div class="Group1">
     <div class="Rectangle1"></div>
     <div class="NinjaClientesLicense">
       NinJa CLIENTES를 사용하면 해당 license 및 개인정보처리방침에 동의하는 것 입니다.
     </div>
     <div class="NinjaClientes">
-      NinJa CLIENTES 에서 실행되는 독립 실행형 클라이언트 입니다. 라이센스 관리를 원하는 사용자에게 가장 좋은 옵션이며, 거의 모든 종류의 라이센스들을 지원합니다
+      NinJa CLIENTES 에서 실행되는 독립 실행형 클라이언트 입니다. 라이센스 관리를 원하는 사용자에게 <br>가장 좋은 옵션이며, 거의 모든 종류의 라이센스들을 지원합니다
     </div>
     <div class="LicenseSystem">
       최고의 라이센스 관리 시스템
@@ -29,16 +30,15 @@
     </div>
     <div class="NinjaCl">NinJa Clientes | </div>
   </div>
-  <div class="Frame57">
-    <div class="serviceLabel">서비스</div>
-    <div class="productLabel">제품</div>
-    <div class="Ninja">NINJA</div>
-    <div class="logoutLabel"><a href="/member/logout">로그아웃</a></div>
-    <div class="loginSignupLabel">
-      <p th:text="${session.loginEmail}"></p>
+  <header class="header">
+    <div class="var">
+      <h1 class="NINJA_H1"><a href="/member/main">NINJA</a></h1>
+      <a class="service" href="#">서비스</a>
+      <a class="service" href="/member/downloadmain">제품</a>
     </div>
-
-  </div>
+    <a href="/member/update" style="margin-left: 70%;" th:text="${session.loginEmail}"></a>
+    <a class="service2" href="/member/logout">로그아웃</a>
+  </header>
   </div>
 </body>
 </html>

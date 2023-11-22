@@ -28,10 +28,11 @@ width: 100%;
 
 .Frame51 {
 width: 545px;
-height: 738px;
-left: 688px;
-top: 143px;
-position: absolute
+    height: 738px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .Rectangle1 {

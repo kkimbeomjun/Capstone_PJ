@@ -1,60 +1,123 @@
+header {
+    height: 75px;
+    padding: 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.NINJA_H1 {
+    font-family: 'Archivo', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #053B50;
+}
+
+
+p {
+      font-family: 'Noto Sans KR', sans-serif;
+}
+
 a {
   font-family: 'Noto Sans KR', sans-serif;
   color: black;
   text-decoration: none;
 }
 
-.Ninja{
-    font-family: 'Archivo', sans-serif;
-    font-family: 'Noto Sans KR', sans-serif;
-    width: 344px; left: 10px; top: 11px; position: absolute;
-    color: #053B50;
-    font-size: 40px;
-    font-family: Fredoka One;
-    font-weight: 700;
-    word-wrap: break-word
-}
-.HeroWrapperText {
-    padding-top: 59px;
-    left: 147px;
-    top: 216.50px;
-    position: absolute;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 75px;
-    display: inline-flex;
+.var {
+    display: flex;
+    align-items: flex-start; /* 수정된 부분: 아이템을 위로 정렬 */
 }
 
-.HeaderText {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 28px;
+.var2{
     display: flex;
 }
 
-.H1PrimaryText {
-    color: #1A202C;
-    font-size: 53px;
-    font-family: Inter;
-    font-weight: 800;
-    line-height: 71px;
-    word-wrap: break-word;
+header a, header p {
+    margin-left: 20px; /* 로그아웃과 이메일 사이의 간격을 조절 */
 }
 
-.SpanDecorativeText {
-    width: 531px;
-    height: 58px;
-    color: #4A5568;
-    font-size: 18px;
-    font-family: Inter;
-    font-weight: 400;
-    line-height: 36px;
-    word-wrap: break-word;
+header h1 {
+    margin-right: 20px;
 }
 
-.BtnPrimary {
+.service {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    top: 32px; /* 원하는 값으로 조절 */
+}
+
+header a, header p {
+    margin-left: auto;
+}
+
+.service 2{
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    top: 32px; /* 원하는 값으로 조절 */
+}
+
+/*샐력션 1*/
+
+.section1{
+      width: 100%;
+      height: 500px;
+      margin: 17px 0 0;
+      padding: 116.5px 972px 219.5px 147px;
+      object-fit: contain;
+      background-color: rgba(0, 0, 0, 0);
+     }
+
+.section1h1{
+
+    font-family: 'Noto Sans KR', sans-serif;
+     width: 511px;
+      height: 71px;
+      flex-grow: 0;
+      font-size: 53px;
+      font-weight: 800;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.34;
+      letter-spacing: normal;
+      text-align: left;
+      color: #1a202c;
+}
+
+.section1_text{
+     font-family: 'Noto Sans KR', sans-serif;
+     width: 531px;
+      height: 58px;
+      flex-grow: 0;
+      font-size: 18px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 2;
+      letter-spacing: normal;
+      text-align: left;
+      color: #4a5568;
+}
+
+.section1_Textbox{
+      width: 531px;
+      height: 343px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 75px;
+
+}
+
+.section1_button {
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 19px;
@@ -71,460 +134,194 @@ a {
 }
 
 .Subscribe {
-    color: #FAFAFA;
-    font-size: 24px;
-    font-family: Inter;
-    font-weight: 600;
-    line-height: 14px;
-    word-wrap: break-word;
+     color: #FAFAFA;
+     font-size: 24px;
+     font-family: Inter;
+     font-weight: 600;
+     line-height: 14px;
+     word-wrap: break-word;
+     text-decoration: none; /* 링크의 밑줄 제거 */
+      border: none;
+         outline: none;
 }
+/*샐력션 1*/
 
-/*와 *//*와 *//*와 */
+/*샐력션 2*/
 
-.Rectangle18{
-    width: 1700px;
-    height: 749px;
-    left: 0px;
-    top: 803px;
-    position: absolute;
-    background: #F5F5F5
-}
-
-
-.NinjaLicenseSection {
-  width: 1478px;
-  height: 281px;
-  left: 86px;
-  top: 1027px;
-  position: absolute;
-  text-align: center
-}
-
-.SectionHeading1 {
-  color: black;
-  font-size: 53px;
-  font-family: Inter;
-  font-weight: 800;
-  line-height: 71px;
-  word-wrap: break-word
-}
-
-.SectionDescription {
- color: black;
- font-size: 25px;
- font-family: Inter;
- font-weight: 400;
- line-height: 71px;
- word-wrap: break-word
-}
-
-/*와 *//*와 *//*와 */
-
-.Box {
-    width: 40px;
-    height: 40px;
-    left: 15px;
-    top: 15px;
-    position: absolute;
-}
-
-.Vector {
-    position: absolute;
-}
-
-.Vector1 {
-    width: 37.69px;
-    height: 40px;
-    left: 1.16px;
-    top: 0px;
-    background: #FFE17D;
-}
-
-.Vector2 {
-    width: 18.84px;
-    height: 30.99px;
-    left: 1.16px;
-    top: 9.01px;
-    background: #FFC350;
-}
-
-.Vector3 {
-    width: 18.84px;
-    height: 30.99px;
-    left: 20px;
-    top: 9.01px;
-    background: #FFD164;
-}
-
-.Vector4 {
-    width: 4.07px;
-    height: 2.63px;
-    left: 3.10px;
-    top: 26.87px;
-    background: #FFE17D;
-}
-
-.Vector5 {
-    width: 6.61px;
-    height: 3.86px;
-    left: 3.11px;
-    top: 23.99px;
-    background: #FFF6D8;
-}
-
-.Vector6 {
-    width: 23.76px;
-    height: 11.50px;
-    left: 8.63px;
-    top: 2.98px;
-    background: #FF8087;
-}
-
-.Vector7 {
-    width: 4.91px;
-    height: 9.79px;
-    left: 27.47px;
-    top: 12.06px;
-    background: #E6646E;
-}
-.Group20 {
-    width: 70px;
-    height: 70px;
-    left: 30px;
-    top: 30px;
-    position: absolute;
-}
-
-.Rectangle8 {
-    width: 70px;
-    height: 70px;
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    background: rgba(236, 249, 255, 0.80);
-    border-radius: 10px;
-}
-
-.Process{
-    width: 1475px;
-    height: 652px;
-    left: 88px;
-    top: 1552px;
-    position: absolute;
-}
-
-.Group21{
-    width: 1170px;
-    height: 308px;
-    left: 154px;
-    top: 303px;
-    position: absolute;
+.section2_h1{
+    font-family: 'Archivo', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 53px;
+    font-weight: 800;
 
 }
 
-.Rectangle9 {
-    width: 27px;
-    height: 27px;
-    left: 22px;
-    top: 35px;
-    position: absolute;
-    background: rgba(255, 195, 80, 0.25);
-    box-shadow: 10px 10px 10px;
-    border-radius: 10px;
-    filter: blur(10px);
+.section2{
+    width: 100% ;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
 }
 
-.Step1{
+.section2_Text{
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+
+.section2_Textbox{
+     text-align: center;
+}
+
+.downliad{
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-left: 18%;
+
+     width: 230.5px;
+     height: 35px;
+     flex-grow: 0;
+     padding: 7px 37.5px 7px 20px;
+     border-radius: 7px;
+     border: solid 1px;
+     px#053b50;
+     background-color: #fff;
+}
+
+.download-button{
+       padding-left: 5%;
+      width: 302px;
+       height: 30px;
+       flex-grow: 0;
+       font-family: FredokaOne;
+       font-size: 25px;
+       font-weight: normal;
+       font-stretch: normal;
+       font-style: normal;
+       line-height: normal;
+       letter-spacing: normal;
+       text-align: center;
+       color: #053b50;
+       text-decoration: none; /* 링크의 밑줄 제거 */
+             border: none;
+                outline: none;
+
+}
+
+/*샐력션 2*/
+
+/*샐력션 3*/
+
+.section3{
+    width: 100% ;
+    height: 500px;
+}
+
+.section3_Textbox{
+    padding-top: 5%;
+
+}
+
+.section3h2{
+     height: 55px;
+      flex-grow: 0;
+      margin: 0 76px 12px 75px;
+      font-family: 'Archivo', sans-serif;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 45px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.22;
+      letter-spacing: normal;
+      text-align: center;
+      color: #060640;
+}
+
+.section3text{
+     height: 56px;
+      flex-grow: 0;
+      margin: 12px 0 0;
+      font-family: AirbnbCerealApp;
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.75;
+      letter-spacing: normal;
+      text-align: center;
+      color: #9090a7;
+}
+
+/*샐력션 3*/
+
+.section3_box1{
     width: 370px;
+      height: 308px;
+      flex-grow: 0;
+      margin: 0 30px 0 0;
+      padding: 30px 38px 24px 30px;
+      opacity: 0.04;
+      border-radius: 14px;
+      border-style: solid;
+      border-width: 2px;
+      border-image-source: linear-gradient(130deg, rgba(6, 6, 64, 0) 12%, #060640);
+      border-image-slice: 1;
+}
+
+.Box_cantinar{
+    padding-top: 4%;
+    padding-bottom: 4%;
+    display: flex;
+    flex:1 ;
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+}
+
+.Box1{
     height: 308px;
-    left: 0px;
-    top: 0px;
-    position: absolute
 }
 
-.Statistics {
-  width: 40px;
-  height: 40px;
-  left: 15px;
-  top: 15px;
-  position: absolute;
+.Box_1{
+    width: 70px; /* 조정된 너비 */
+      height: 70px; /* 조정된 높이 */
+      flex-grow: 0;
+      margin: 0 232px 40px 0;
+     padding: 15px; /* padding 조정 */
+      border-radius: 10px;
+      background-color: rgba(236, 249, 255, 0.8);
 }
 
-.Vector {
-  position: absolute;
+.Box2{
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 308px;
 }
 
-#Vector1 {
-  width: 9.17px;
-  height: 16.23px;
-  left: 4.52px;
-  top: 23.77px;
-  background: #FFDC4A;
+.Box_2{
+     width: 70px; /* 조정된 너비 */
+      height: 70px; /* 조정된 높이 */
+      flex-grow: 0;
+     margin: 0 232px 40px 0;
+     padding: 15px; /* padding 조정 */
+     border-radius: 10px;
+     background-color: rgba(236, 249, 255, 0.8);
 }
 
-#Vector2 {
-  width: 4.11px;
-  height: 16.23px;
-  left: 4.52px;
-  top: 23.77px;
-  background: #EDCA3A;
-}
-
-#Vector3 {
-  width: 9.17px;
-  height: 22.12px;
-  left: 16.96px;
-  top: 17.88px;
-  background: #FF3132;
-}
-
-#Vector4 {
-  width: 4.11px;
-  height: 22.12px;
-  left: 16.96px;
-  top: 17.88px;
-  background: #D82A2B;
-}
-
-#Vector5 {
-  width: 9.17px;
-  height: 28px;
-  left: 29.41px;
-  top: 12px;
-  background: #3CDCF9;
-}
-
-#Vector6 {
-  width: 4.11px;
-  height: 28px;
-  left: 29.41px;
-  top: 12px;
-  background: #30CBE8;
-}
-
-#Vector7 {
-  width: 38.87px;
-  height: 19.15px;
-  left: 0.57px;
-  top: 0px;
-  background: #2DC580;
-}
-
-.Rectangle9{
-    width: 27px;
-    height: 27px;
-    left: 52px;
-    top: 62px;
-    position: absolute;
-    background: rgba(255, 79, 56, 0.20);
-    box-shadow: 10px 10px 10px;
-    border-radius: 10px;
-    filter: blur(10px)
-}
-
-#Vector8 {
-  width: 40px;
-  height: 30.24px;
-  left: 0px;
-  top: 10.08px;
-  background: white;
-}
-
-#Vector9 {
-  width: 40px;
-  height: 5.04px;
-  left: 0px;
-  top: 10.08px;
-  background: #DCE9FF;
-}
-
-#Vector10 {
-  width: 2.50px;
-  height: 5.04px;
-  left: 5px;
-  top: 0px;
-  background: #D0DCEE;
-}
-
-#Vector11 {
-  width: 2.50px;
-  height: 5.04px;
-  left: 32.50px;
-  top: 0px;
-  background: #D0DCEE;
-}
-
-#Vector12 {
-  width: 8.23px;
-  height: 8.30px;
-  left: 31.77px;
-  top: 32.02px;
-  background: #DBE6F8;
-}
-
-#Vector13 {
-  width: 18.14px;
-  height: 13.40px;
-  left: 10.98px;
-  top: 18.53px;
-  background: #0AC1A7;
-}
-
-#Vector14 {
-  width: 40px;
-  height: 8.82px;
-  left: 0px;
-  top: 3.78px;
-  background: #FF3132;
-}
-
-.Calendar {
-  width: 40px;
-  height: 40.31px;
-  left: 15px;
-  top: 15px;
-  position: absolute;
-}
-
-.Group20{
-width: 70px;
-height: 70px;
-left: 30px;
-top: 30px;
-position: absolute;
-
-}
-
-.Rectangle8{
-width: 70px;
-height: 70px;
-left: 0px;
-top: 0px;
-position: absolute;
-background: rgba(236, 249, 255, 0.80);
-border-radius: 10px
-}
-
-.Rectangle7{
-width: 370px;
+.Box3{
 height: 308px;
-left: 0px;
-top: 0px;
-position: absolute;
-opacity: 0.04;
-border-radius: 14px;
-border: 2px #060640 solid;
-
 }
 
-.Step3{
-width: 370px;
-height: 308px;
-left: 800px;
-top: 0px;
-position: absolute
-}
+.Box_3{
+   width: 70px; /* 조정된 너비 */
+      height: 70px; /* 조정된 높이 */
+      flex-grow: 0;
+     margin: 0 232px 40px 0;
+     padding: 15px; /* padding 조정 */
+     border-radius: 10px;
+     background-color: rgba(236, 249, 255, 0.8);
 
-.Step2{
-width: 370px;
-height: 308px;
-left: 400px;
-top: 0px;
-position: absolute
 }
-
-.SectionHeading {
-  width: 431px;
-  height: 123px;
-  left: 523px;
-  top: 110px;
-  position: absolute;
+.Box_h2{
+    font-family: 'Noto Sans KR', sans-serif;
 }
-
-.HowItWorksTitle {
-  left: 75px;
-  top: 0px;
-  position: absolute;
-  text-align: center;
-  color: #060640;
-  font-size: 45px;
-  font-family: Airbnb Cereal App;
-  font-weight: 700;
-  line-height: 55px;
-  word-wrap: break-word;
-}
-
-.BusinessPromotionText {
-  width: 431px;
-  left: 0px;
-  top: 67px;
-  position: absolute;
-  text-align: center;
-  color: #9090A7;
-  font-size: 16px;
-  font-family: Airbnb Cereal App;
-  font-weight: 400;
-  line-height: 28px;
-  word-wrap: break-word;
-}
-
-.Feature {
-  color: black;
-  font-size: 16px;
-  font-family: 'Fredoka One', sans-serif;
-  font-weight: 400;
-  line-height: 28px;
-  word-wrap: break-word;
-}
-
-.Frame57{
-        padding-bottom: 20.9%;
-        padding-top: 1%;
-        padding-left: 92.8%;
-        position: absolute;
-        color: black;
-        font-size: 20px;
-        font-family: Inter;
-        font-weight: 600;
-        line-height: 14px;
-        word-wrap: break-word;
-     z-index: 1;
-}
-
-.NavContainer {
-  position: absolute;
-  top: 31px;
-  color: black;
-  font-size: 20px;
-  font-family: Inter;
-  font-weight: 600;
-  line-height: 14px;
-  word-wrap: break-word;
-}
-
-.NavItem {
-  position: relative;
-  display: inline-block;
-  margin-right: 20px; /* 조절 가능 */
-}
-
-.NavItem a {
-  color: black;
-  text-decoration: none;
-}
-
-.NavItem1 {
-    width: 56px;
-    height: 28px;
-    left: 267px;
-    top: 31px;
-    position: absolute;
-    color: black;
-    font-size: 20px;
-    font-family: Inter;
-    font-weight: 600;
-    line-height: 14px;
-    word-wrap: break-word;
-    z-index: 2;
-}
-

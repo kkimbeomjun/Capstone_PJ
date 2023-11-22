@@ -258,7 +258,8 @@ nav span {
 }
 
 .Box_cantinar{
-    padding-top: 8%;
+   padding-top: 4%;
+   padding-bottom: 4%;
     display: flex;
     flex:1 ;
     align-items: center; /* 세로 중앙 정렬 */
