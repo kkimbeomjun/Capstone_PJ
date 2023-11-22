@@ -4,149 +4,80 @@
   <meta charset="UTF-8">
   <title>main</title>
   <link rel="stylesheet" type="text/css" href="/css/index.css">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,900&family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
-  <style>
-    /* 공통 스타일 */
-    .container {
-      position: relative;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .frame {
-      width: 100%;
-      height: 100%;
-      background: #F9F9F9;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-      border-radius: 20px;
-    }
-
-    /* 반응형 스타일 */
-    @media (min-width: 768px) {
-      .frame {
-        width: 50%;
-      }
-    }
-
-    /* 미디어 쿼리에 따라 추가적인 스타일 정의 가능 */
-
-    /* 나머지 스타일은 그대로 사용 */
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,900&family=Noto+Sans+KR:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
 
 </head>
 <body>
-<div style="width: 100%; height: 2000px; position: relative; background: white">
-  <div class="Rectangle17"></div>
-  <div class="HeroWrapperText">
-    <div class="HeaderText">
-      <div class="H1PrimaryText">라이센스를 편하게 관리</div>
-      <div class="SpanDecorativeText">Ninja에서 좀 더 쉽게 자신의 License를 편하게 관리해 보세요</div>
+<header>
+  <div class="var">
+    <h1 class="NINJA_H1">NINJA</h1>
+    <a class="service" href="#">서비스</a>
+    <a class="service" href="/member/downloadmain">제품</a>
+  </div>
+  <nav>
+    <a href="/member/login"><span>로그인/가입</span></a>
+  </nav>
+</header>
+
+<section class="section1">
+  <div class="section1_Textbox">
+  <h2 class="section1h1">라이센스를 <br>
+    편하게 관리하세요</h2>
+  <div class="section1_text">
+    NINJA 에서 좀더 쉽게 자신의 License를 편하게 관리해 보세요
+  </div>
+  <div class="section1_button">
+  <a class="Subscribe" href="/member/sub">Subscribe</a>
+  </div>
+  </div>
+</section>
+<section class="section2">
+  <div class="section2_Textbox">
+  <h1 class="section2_h1">NINJA의 새로운 기능</h1>
+  <p class="section2_Text" style="padding-bottom:8%">NINJA 클라이언트를 다운로드 받아보세요</p>
+    <div class="downliad">
+    <a href="/member/downloadmain" class="download-button">Download</a>
     </div>
-    <a href="/member/sub">
-      <button class="BtnPrimary">
-        <div class="Subscribe">Subscribe</div>
-      </button>
-    </a>
   </div>
-  <div class="Rectangle18"
-       style="padding-top: 25%;
-    left: 0%;
-    position: absolute;
-    background: #F5F5F5;
-    padding-right: 100%;
-    padding-bottom: 30.7%;
-">
+</section>
+<section class ="section3">
+  <div class="section3_Textbox">
+  <h2 class="section3h2">HOW it works</h2>
+  <div class="section3text">Businesses generally promote their brand, products, and <br>
+    services by identifying audience.</div>
   </div>
-  <div class="NinjaNinjaLicense">
-  <span class="NewFeatureTitle">NINJA 의 새로운 기능<br/></span>
-  <span class="FeatureDescription">NinJa 에서 좀더 쉽게 자신의 License를 편하게 관리해 보세요</span>
-    <div class="ButtonSignup">
-      <!--<div class="InputPassword"></div>-->
-      <!--<div class="Subscribe1">Subscribe</div>-->
+  <div class="Box_cantinar">
+  <div class="Box1">
+    <div class="Box_1">
+      <span class="material-symbols-outlined" style="font-size: 60px;">
+      alarm_on
+      </span>
+    </div>
+    <h2 class="Box_h2">알람 및 리마인더</h2>
+    <p>라이센스 만료일 이전에 경고 메시지나 이메일 알림</p>
   </div>
+  <div class="Box2">
+    <div class="Box_2">
+      <span class="material-symbols-outlined" style="font-size: 60px; color:#964b00;">
+      event
+      </span>
+    </div>
+    <h2 class="Box_h2">실시간 라이선스 관리</h2>
+    <p>라이센스 만료일,라이센스 키 실시간 파악</p>
   </div>
-    <div class="Process">
-    <div class="Group21">
-      <div class="Step1">
-        <div class="Rectangle7"></div>
-        <div class="Group20">
-          <div class="Rectangle8"></div>
-          <div class="Rectangle9"></div>
-          <div class="Box">
-            <div class="Vector" id="Vector1"></div>
-            <div class="Vector" id="Vector2"></div>
-            <div class="Vector" id="Vector3"></div>
-            <div class="Vector" id="Vector4"></div>
-            <div class="Vector" id="Vector5"></div>
-            <div class="Vector" id="Vector6"></div>
-            <div class="Vector" id="Vector7"></div>
-          </div>
-        </div>
+    <div class="Box3">
+      <div class="Box_3">
+      <span class="material-symbols-outlined" style="font-size: 60px; color:#1835D0;">
+      timer
+      </span>
       </div>
-      <div class="Step3">
-        <div class="Rectangle7"></div>
-        <div class="Group20">
-          <div class="Rectangle8"></div>
-          <div class="Statistics">
-            <div class="Vector" id="Vector8"></div>
-            <div class="Vector" id="Vector9"></div>
-            <div class="Vector" id="Vector10"></div>
-            <div class="Vector" id="Vector11"></div>
-            <div class="Vector" id="Vector12"></div>
-            <div class="Vector" id="Vector13"></div>
-            <div class="Vector" id="Vector14"></div>
-          </div>
-        </div>
-        <div class="Rectangle99"></div>
-      </div>
-      <div class="Step2" style="width: 370px; height: 308px; left: 400px; top: 0px; position: absolute">
-        <div class="Rectangle7" style="width: 370px; height: 308px; left: 0px; top: 0px; position: absolute; opacity: 0.04; background: white; box-shadow: 0px 30px 50px #030325; border-radius: 14px; border: 2px solid"></div>
-        <div class="Group20" style="width: 70px; height: 70px; left: 30px; top: 30px; position: absolute">
-          <div class="Rectangle8" style="width: 70px; height: 70px; left: 0px; top: 0px; position: absolute; background: rgba(236, 249, 255, 0.80); border-radius: 10px"></div>
-          <div class="Rectangle9" style="width: 27px; height: 27px; left: 22px; top: 35px; position: absolute; background: rgba(85.95, 198.65, 255, 0.30); box-shadow: 15px 15px 15px; border-radius: 10px; filter: blur(15px)"></div>
-          <div class="Calendar">
-            <div class="Vector" id="Vector15"></div>
-            <div class="Vector" id="Vector16"></div>
-            <div class="Vector" id="Vector17"></div>
-            <div class="Vector" id="Vector18"></div>
-            <div class="Vector" id="Vector19"></div>
-            <div class="Vector" id="Vector20"></div>
-            <div class="Vector" id="Vector21"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="SectionHeading">
-    <div class="HowItWorks">How it works</div>
-    <div class="BusinessesGenerallyPromoteTheirBrandProductsAndServicesByIdentifyingAudience">
-      Businesses generally promote their brand, products, and services by identifying audience.
+      <h2 class="Box_h2">실시간 라이선스 관리</h2>
+      <p>라이센스 만료일,라이센스 키 실시간 파악</p>
     </div>
   </div>
-    <div class="LicenseWarning">
-      라이센스 만료일 이전에 경고 메시지나 이메일 알림
-    </div>
-    <div class="RealTimeLicenseManagement">
-      실시간 라이선스 관리
-    </div>
-    <div class="NotificationReminder">
-      알림 및 리마인더
-    </div>
-    <div class="MultipleLicenseManagement">
-      다중 라이센스 관리
-    </div>
-    <div class="LicenseTracking">
-      기업 및 개인 사용자들이 복수의 라이센스 간편하게 추적하고 유지
-    </div>
-    <div class="LicenseExpiration">
-      라이센스 만료일, 라이센스 키 <br/>실시간 파악
-    </div>
-  </div>
-    <div class="ServiceLabel">서비스</div>
-    <div class="ProductLabel"><a href="/member/download">제품</a></div>
-    <div class="NINJA">NINJA</div>
-    <div class="LoginLink"><a href="/member/login">로그인/가입</a></div>
-</div>
+
+</section>
 </body>
 </html>
