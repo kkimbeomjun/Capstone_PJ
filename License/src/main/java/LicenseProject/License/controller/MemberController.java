@@ -28,6 +28,7 @@ import java.security.SecureRandom;
 
 
 import java.security.Security;
+import java.time.LocalDateTime;
 import java.util.Base64;
 import java.util.Optional;
 import java.util.Random;
@@ -59,12 +60,24 @@ public class MemberController {
             return "sub";
         }
         String randomValue = memberService.generateAndSaveRandomValueWithExpiration(userEmail,months);
+
+        LocalDateTime subscriptionTime = LocalDateTime.now();
+
+        saveSubscriptionTime(userEmail,subscriptionTime);
+
         model.addAttribute("randomValue",randomValue);
-
-
         String message = months + "달 구독 완료";
         model.addAttribute("message",message);
         return "sub";
+    }
+
+    private void saveSubscriptionTime(String userEmail, LocalDateTime subscriptionTime) {
+        MemberEntity memberEntity = memberRepository.findByMemberEmail(userEmail)
+                .orElseThrow(()->new RuntimeException("Member not found"));
+
+        memberEntity.setSubscriptionTime(subscriptionTime);
+        memberRepository.save(memberEntity);
+
     }
 
     @GetMapping("/member/main")

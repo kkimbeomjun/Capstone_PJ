@@ -26,6 +26,8 @@ public class MemberEntity {
     @Column
     private String memberPassword;
 
+    private LocalDateTime subscriptionTime;
+
     @Column
     private String randomMixedValue;
 

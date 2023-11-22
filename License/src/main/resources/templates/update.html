@@ -1,48 +1,67 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>update</title>
+
+  <meta charset="UTF-8">
+  <title>update</title>
+  <link rel="stylesheet" type="text/css" href="/css/update.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,900&family=Noto+Sans+KR:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,900&family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
 <form action="/member/update" method="post">
-<div class="1" style="width: 1920px; height: 1080px; position: relative; background: rgba(0, 0, 0, 0)">
-  <input type="hidden" th:value="${updateMember.id}" name="id">
-  <div class="Rectangle2" style="width: 1920px; height: 1080px; left: 0px; top: -5px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)"></div>
-  <div class="Line8" style="width: 244px; height: 0px; left: 648px; top: 305px; position: absolute; border: 1px rgba(0, 0, 0, 0.25) solid"></div>
-  <div class="Line7" style="width: 240px; height: 0px; left: 255px; top: 254px; position: absolute; border: 1px rgba(0, 0, 0, 0.25) solid"></div>
-  <div style="left: 31px; top: 220px; position: absolute; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">회원정보 관리</div>
-  <div style="left: 31px; top: 274px; position: absolute; color: rgba(0, 0, 0, 0.70); font-size: 20px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">라이센스 관리</div>
-  <div style="left: 31px; top: 160px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 30px; word-wrap: break-word">마이페이지</div>
-  <div class="Frame49" style="width: 1663px; height: 915px; left: 257px; top: 160px; position: absolute; background: white">
-    <div style="width: 535px; height: 96px; left: 28px; top: 0px; position: absolute"><span style="color: black; font-size: 30px; font-family: Inter; font-weight: 600; line-height: 50px; word-wrap: break-word">기본 정보<br/></span><span style="color: rgba(0, 0, 0, 0.70); font-size: 15px; font-family: Inter; font-weight: 600; line-height: 50px; word-wrap: break-word">이메일은 변경할 수 없습니다 </span></div>
-    <div class="Rectangle33" style="width: 347px; height: 301px; left: 28px; top: 129px; position: absolute; background: rgba(217, 217, 217, 0.70)"></div>
-    <div class="Email" style="width: 347px; height: 93px; left: 28px; top: 129px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inter; font-weight: 600; line-height: 50px; word-wrap: break-word">Email</div>
-    <div class="Rectangle34" style="width: 1184px; height: 301px; left: 375px; top: 129px; position: absolute; background: #D9D9D9"></div>
-    <div class="Mail" style="width: 1184px; height: 93px; left: 375px; top: 233px; position: absolute; color: black; font-size: 30px; font-family: Inter; font-weight: 600; line-height: 50px; word-wrap: break-word">
-      <input type="text" th:value="${updateMember.memberPassword}" name="memberPassword"></div>
-    <div class="Mail" style="width: 1184px; height: 94px; left: 375px; top: 336px; position: absolute; color: black; font-size: 30px; font-family: Inter; font-weight: 600; line-height: 50px; word-wrap: break-word">
+<div class="Rectangle2"></div>
+<div class="text-box" style="left: 31px; top: 220px;">회원정보 관리</div>
+<div class="text-box" style="left: 31px; top: 274px;">라이센스 관리</div>
+<div class="text-box" style="left: 31px; top: 166px;">마이페이지</div>
+<div class="Rectangle35"></div>
+<div class="Group24" style="width: 1016px; height: 568px; left: 380px; top: 156px; position: absolute">
+  <div class="Group1" style="width: 1016px; height: 568px; left: 0px; top: 0px; position: absolute">
+
+    <div class="Rectangle1"></div>
+
+    <div class="infoText" style="left: 28px; top: 33%;">구독정보</div>
+
+    <div class="subText">
+      <input type="text" th:value="${subscriptionTime}" readonly>
+    </div>
+
+    <div class="EmailText">
+    <input type = "text" th:value="${updateMember.memberEmail}"
+           name="memberEmail" readonly>
+    </div>
+    <div class="Line15"></div>
+    <!--<div class="Rectangle34625594"></div>-->
+    <div class="infoText" style="left: 29px; top: 146px;">비밀번호</div>
+    <div class="passwordText">
+      <input type = "text" th:value="${updateMember.memberPassword}"
+             name="memberPassword">
+    </div>
+    <div class="Line14"></div>
+    <div class="Rectangle34625593"></div>
+    <div class="infoText" style="left: 28px; top: 17%;">이메일</div>
+
+
+    <div class="pageTitle">사용자 정보 수정</div>
+    <div class="ButtonLogin">
+      <div class="InputPassword">
+        <input type="submit" value="정보수정">
       </div>
-    <div class="Line10" style="width: 1531px; height: 0px; left: 28px; top: 336px; position: absolute; border: 1px rgba(0, 0, 0, 0.50) solid"></div>
-    <div class="Line9" style="width: 1533px; height: 0px; left: 26px; top: 222px; position: absolute; border: 1px rgba(0, 0, 0, 0.50) solid"></div>
-    <div class="Line11" style="width: 1531px; height: 0px; left: 28px; top: 430px; position: absolute; border: 1px rgba(0, 0, 0, 0.50) solid"></div>
-    <div style="width: 347px; height: 114px; left: 28px; top: 222px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inter; font-weight: 600; line-height: 50px; word-wrap: break-word">비밀번호</div>
-    <div style="width: 347px; height: 94px; left: 28px; top: 336px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inter; font-weight: 600; line-height: 50px; word-wrap: break-word">구독 기간</div>
-    <div class="Mail" style="width: 1184px; height: 93px; left: 375px; top: 129px; position: absolute; color: black; font-size: 30px; font-family: Inter; font-weight: 600; line-height: 50px; word-wrap: break-word">
-      <input type="text" th:value="${updateMember.memberEmail}" name="memberEmail" readonly></div>
-    <div style="width: 160px; height: 39px; left: 1399px; top: 441px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inter; font-weight: 600; line-height: 50px; word-wrap: break-word">
-      <input type="submit" value="정보수정"></div>
+    </div>
   </div>
-  <div class="Frame57" style="width: 1920px; height: 83px; left: 0px; top: -5px; position: absolute; background: white">
-    <div style="left: 173px; top: 31px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">서비스<br/></div>
-    <div style="width: 56px; height: 28px; left: 267px; top: 31px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">제품</div>
-    <div class="Ninja" style="width: 344px; left: 29px; top: 13px; position: absolute; color: #053B50; font-size: 40px; font-family: Fredoka One; font-weight: 400; word-wrap: break-word">NINJA</div>
-    <div style="left: 1648px; top: 41px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">
-      <a href="/member/logout">로그아웃</a></div>
-  </div>
-  <div style="left: 1759px; top: 31px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word"> <p th:text="${session.loginEmail}"></p></div>
-  <div class="Line6" style="width: 240.01px; height: 0px; left: 17px; top: 202.25px; position: absolute; border: 1px black solid"></div>
+  <div class="Line14" style="width: 40%; height: 0px; left: 28px; top: 39%; position: absolute; border: 1px #DBCFCF solid"></div>
 </div>
+<div class="Line6" style="width: 240.01px; height: 0px; left: 17px; top: 202.25px; position: absolute; border: 1px black solid"></div>
+<header class="header">
+  <div class="var">
+    <h1 class="NINJA_H1"><a href="/member/main">NINJA</a></h1>
+    <a class="service" href="#">서비스</a>
+    <a class="service" href="/member/downloadmain">제품</a>
+  </div>
+  <p style="margin-left: 70%;" th:text="${session.loginEmail}"></p>
+  <a class="service2" href="/member/logout">로그아웃</a>
+</header>
 </form>
 </body>
 </html>

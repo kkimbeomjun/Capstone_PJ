@@ -1,0 +1,301 @@
+header {
+    height: 45px;
+    padding: 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.NINJA_H1 {
+    font-family: 'Archivo', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #053B50;
+}
+
+
+p {
+      font-family: 'Noto Sans KR', sans-serif;
+}
+
+a {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: black;
+  text-decoration: none;
+}
+
+
+
+.var {
+    display: flex;
+    align-items: flex-start; /* 수정된 부분: 아이템을 위로 정렬 */
+}
+
+header h1 {
+    margin-right: 20px;
+}
+
+.service {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    top: 32px; /* 원하는 값으로 조절 */
+}
+
+nav span {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.selection1 {
+  width: 100%;
+  margin: 76px 22px 100% 182px;
+  padding: 0; /* padding을 0으로 조정 */
+  background-color: #eee;
+}
+
+.Box{
+  width: 1659px;
+  height: 1006px;
+  margin: 73px 0 0 261px;
+  padding: 83px 524px 355px 119px;
+  background-color: #eee;
+}
+
+/* styles.css */
+
+.Rectangle2 {
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: -5px;
+  position: absolute;
+  background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.text-box {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.70);
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 14px;
+  word-wrap: break-word;
+}
+
+.Rectangle35{
+    width: 100%;
+    height: 100%;
+    left: 261px;
+    top: 73px;
+    position: absolute;
+    background: #EEEEEE;
+}
+
+/* styles.css */
+
+.ButtonLogin {
+  width: 160px;
+  height: 48px;
+  left: 713px;
+  top: 360px;
+  position: absolute;
+}
+
+.InputPassword {
+  width: 160px;
+      height: 48px;
+      left: -253%;
+      top: -116px;
+      position: absolute;
+      background: #053B50;
+      border-radius: 7px;
+}
+
+.ButtonText {
+  width: 99.15px;
+  height: 34.12px;
+  left: 25.69px;
+  top: 13.88px;
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-size: 32px;
+  font-family: 'Fredoka One', cursive;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+/* styles.css */
+
+.Rectangle112 {
+      width: 30%;
+      height: 49px;
+      left: 40%;
+      top: 229px;
+      position: absolute;
+      background: #D9D9D9;
+}
+
+.infoText {
+  width: 145px;
+  left: 28px;
+  top: 15%;
+  position: absolute;
+  color: black;
+  font-size: 16px;
+  font-family: 'Inria Sans', sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.EmailText{
+    width: 145px;
+      left: 14%;
+      top: 17%;
+      position: absolute;
+      color: black;
+      font-size: 16px;
+      font-family: 'Inria Sans', sans-serif;
+      font-weight: 400;
+      word-wrap: break-word;
+}
+
+.subText{
+      width: 145px;
+      left: 13.7%;
+      top: 186px;
+      position: absolute;
+      color: black;
+      font-size: 16px;
+      font-family: 'Inria Sans', sans-serif;
+      font-weight: 400;
+      word-wrap: break-word;
+
+}
+
+.passwordText{
+      width: 145px;
+          left: 14%;
+          top: 146px;
+          position: absolute;
+          color: black;
+          font-size: 16px;
+          font-family: 'Inria Sans', sans-serif;
+          font-weight: 400;
+          word-wrap: break-word;
+
+}
+
+.passwordText input {
+  border: none; /* 네모칸 없애기 */
+  outline: none; /* 포커스 효과 없애기 */
+  background: none; /* 배경 없애기 */
+}
+
+.EmailText input {
+  border: none; /* 네모칸 없애기 */
+  outline: none; /* 포커스 효과 없애기 */
+  background: none; /* 배경 없애기 */
+}
+
+.pageTitle {
+  width: 825.45px;
+  left: 27.85px;
+  top: 23px;
+  position: absolute;
+  color: #053B50;
+  font-size: 30px;
+  font-family: 'Gothic A1', sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+/* styles.css */
+
+.Rectangle34625594 {
+  width: 637px;
+  height: 49px;
+  left: 216px;
+  top: 271px;
+  position: absolute;
+  background: #D9D9D9;
+}
+
+.infoText {
+  width: 145px;
+  left: 29px;
+  top: 197px;
+  position: absolute;
+  color: black;
+  font-size: 16px;
+  font-family: 'Inria Sans', sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.Line14 {
+  width: 40%;
+  height: 0px;
+  left: 28px;
+  top : 23%;
+  position: absolute;
+  border: 1px #DBCFCF solid;
+}
+
+/* styles.css */
+
+.Rectangle1 {
+      width: 61.2%;
+      height: 56.8%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  background: #F9F9F9;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.infoText {
+  width: 145px;
+  left: 28px;
+  top: 286px;
+  position: absolute;
+  color: black;
+  font-size: 16px;
+  font-family: 'Inria Sans', sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.Line15 {
+    width: 40%;
+    height: 0px;
+    left: 28px;
+    top: 31%;
+    position: absolute;
+    border: 1px #DBCFCF solid;
+}
+
+.Line17 {
+        width: 40.4%;
+        height: 0px;
+        left: 408px;
+        top: 220px;
+        position: absolute;
+        border: 1px black solid;
+}
+
+.Rectangle113{
+        width: 17%;
+        height: 49px;
+        left: 536px;
+        top: 245px;
+        position: absolute;
+        background: #D9D9D9;
+}

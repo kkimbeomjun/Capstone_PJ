@@ -27,6 +27,7 @@ public class MemberDTO {
             message = "비밀번호는 영문과 숫자 조합으로 8 ~ 16자리까지 가능합니다.")
     private String memberPassword;
 
+
     private String randomValue;
     public static MemberDTO toMemberDTO(MemberEntity memberEntity){
         MemberDTO memberDTO = new MemberDTO();
