@@ -86,6 +86,11 @@ public class MemberController {
 
     }
 
+    @GetMapping("/member/index")
+        public String indexForm(){
+        return "index";
+    }
+
     //회원가입 페이지 출력 요청
     @GetMapping("/member/save")
         public String saveForm() {

@@ -13,9 +13,10 @@
 
 <header>
   <div class="var">
-    <h1 class="NINJA_H1">NINJA</h1>
+    <a href="/member/index"><h1 class="NINJA_H1">NINJA</h1></a>
     <a class="service" href="#">서비스</a>
-    <a class="service" href="/member/downloadmain">제품</a>
+    <a class="service" href="/member/login"
+       onclick="showAlert()">제품</a>
   </div>
   <nav>
     <a href="/member/login"><span>로그인/가입</span></a>
@@ -30,8 +31,10 @@
     NINJA 에서 좀더 쉽게 자신의 License를 편하게 관리해 보세요
   </div>
   <div class="section1_button">
-  <a class="Subscribe" href="/member/sub">Subscribe</a>
+  <a class="Subscribe" href="/member/login"
+     onclick="showAlert()">Subscribe</a>
   </div>
+
   </div>
 </section>
 <section class="section2">
@@ -39,7 +42,8 @@
   <h1 class="section2_h1">NINJA의 새로운 기능</h1>
   <p class="section2_Text" style="padding-bottom:8%">NINJA 클라이언트를 다운로드 받아보세요</p>
     <div class="downliad">
-    <a href="/member/downloadmain" class="download-button">Download</a>
+    <a href="/member/login" class="download-button"
+       onclick="showAlert()">Download</a>
     </div>
   </div>
 </section>
@@ -81,4 +85,9 @@
 
 </section>
 </body>
+<script>
+        function showAlert() {
+            alert("로그인 후 이용해 주세요");
+        }
+    </script>
 </html>

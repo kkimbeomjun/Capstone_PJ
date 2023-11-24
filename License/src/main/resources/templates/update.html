@@ -12,7 +12,7 @@
 <body>
 <form action="/member/update" method="post">
 <div class="Rectangle2"></div>
-<div class="text-box" style="left: 31px; top: 220px;"><a href="/member/sub">회원정보 관리</a></div>
+<div class="text-box" style="left: 31px; top: 220px;"><a href="/member/update">회원정보 관리</a></div>
   <div class="text-box" style="left: 31px; top: 263px;"><a href="/member/downloadmain">라이센스 관리</a></div>
 <div class="text-box" style="left: 31px; top: 166px;">마이페이지</div>
 <div class="Rectangle35"></div>
@@ -55,11 +55,11 @@
 <div class="Line6" style="width: 240.01px; height: 0px; left: 17px; top: 202.25px; position: absolute; border: 1px black solid"></div>
 <header class="header">
   <div class="var">
-    <h1 class="NINJA_H1"><a href="/member/main">NINJA</a></h1>
+    <a href="/member/main"><h1 class="NINJA_H1">NINJA</h1></a>
     <a class="service" href="#">서비스</a>
     <a class="service" href="/member/downloadmain">제품</a>
   </div>
-  <p style="margin-left: 70%;" th:text="${session.loginEmail}"></p>
+  <a href="/member/update" style="margin-left: 70%;" th:text="${session.loginEmail}"></a>
   <a class="service2" href="/member/logout">로그아웃</a>
 </header>
 </form>
