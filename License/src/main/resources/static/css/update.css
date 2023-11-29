@@ -114,6 +114,23 @@ nav span {
       border-radius: 7px;
 }
 
+.InputPassword input[type="submit"] {
+    background: none;
+    border: none;
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    padding-left: 47px;
+    padding-top: 12px;
+    font-family: 'Archivo', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: white; /* 텍스트 색을 흰색으로 설정 */
+}
+
+
+
+
 .ButtonText {
   width: 99.15px;
   height: 34.12px;

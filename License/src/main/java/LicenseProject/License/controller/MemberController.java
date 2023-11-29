@@ -125,6 +125,9 @@ public class MemberController {
         }
     }
 
+
+
+
     @GetMapping("/member/update")
     public String updateForm(HttpSession session, Model model){
        String myEmail = (String)session.getAttribute("loginEmail");
