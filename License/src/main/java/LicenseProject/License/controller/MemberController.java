@@ -222,6 +222,10 @@ public class MemberController {
                 .body(resource);
     }
 
+    @GetMapping("/member/info")
+    public String info(){
+        return "info";
+    }
 
 }
 

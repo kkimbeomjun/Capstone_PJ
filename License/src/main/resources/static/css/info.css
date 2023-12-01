@@ -1,0 +1,128 @@
+header {
+    height: 48px;
+    padding: 0.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.75%;
+}
+
+.NINJA_H1 {
+    font-family: 'Archivo', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #053B50;
+}
+
+
+p {
+      font-family: 'Noto Sans KR', sans-serif;
+}
+
+a {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: black;
+  text-decoration: none;
+}
+
+.var {
+    display: flex;
+    align-items: flex-start; /* 수정된 부분: 아이템을 위로 정렬 */
+}
+
+.var2{
+    display: flex;
+}
+
+header a, header p {
+    margin-left: 20px; /* 로그아웃과 이메일 사이의 간격을 조절 */
+}
+
+header h1 {
+    margin-right: 20px;
+}
+
+.service {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    top: 32px; /* 원하는 값으로 조절 */
+}
+
+header a, header p {
+    margin-left: auto;
+}
+
+.service 2{
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    top: 32px; /* 원하는 값으로 조절 */
+     display: flex;
+     align-items: center;
+}
+.section1 {
+  float: left;
+  width: 100%;
+  font-size: 13px;
+  color: #fff;
+  border-top: none;
+  margin-top: 0;
+  background-color: #202020;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.title_var {
+    margin-left: 3%;
+  margin-right: auto; /* .title_var를 맨 왼쪽으로 고정시킴 */
+}
+
+
+.scrollButton {
+  cursor: pointer;
+  padding: 5px;
+  background-color: lightblue;
+  border: none;
+  border-radius: 5px;
+  margin-right: 2%;
+}
+
+/* 추가 스타일링 (예시) */
+.section2 {
+            margin-top: 30px;
+          padding: 20px;
+          border: 1px solid #ccc;
+          display: flex;
+}
+
+.section2 > left_var,
+.section2 > Right_var {
+    flex: 1; /* 각각의 요소가 가용 가능한 공간을 같은 비율로 차지하도록 설정 */
+    margin-right: 20px; /* 원하는 간격으로 설정 */
+    border-right: 2px solid #333;
+}
+
+.Right_var{
+margin-right: 5%;
+}
+
+.left_var{
+            flex: 1;
+            padding: 0 20px;
+            position: relative;
+        }
+
+.left_var::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 45%;
+            height: 100%;
+            width: 2px;
+            background-color: #333; /* 선의 색상 */
+        }
