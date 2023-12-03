@@ -93,36 +93,19 @@ header a, header p {
 }
 
 /* 추가 스타일링 (예시) */
-.section2 {
-            margin-top: 30px;
-          padding: 20px;
-          border: 1px solid #ccc;
-          display: flex;
-}
 
-.section2 > left_var,
-.section2 > Right_var {
-    flex: 1; /* 각각의 요소가 가용 가능한 공간을 같은 비율로 차지하도록 설정 */
-    margin-right: 20px; /* 원하는 간격으로 설정 */
-    border-right: 2px solid #333;
-}
+.box_table {
+            display: flex;
+            margin-top: 68.4px;
+        }
 
-.Right_var{
-margin-right: 5%;
-}
-
-.left_var{
+        .box1, .box2 {
             flex: 1;
-            padding: 0 20px;
-            position: relative;
+            padding: 20px;
         }
 
-.left_var::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 45%;
-            height: 100%;
-            width: 2px;
-            background-color: #333; /* 선의 색상 */
+        .box2 {
+            flex: 3; /* 첫 번째 섹션은 3:7 비율을 가집니다. */
         }
+
+
