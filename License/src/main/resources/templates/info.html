@@ -18,19 +18,136 @@
         <a class="service" href="/member/downloadmain">제품</a>
     </div>
     <a href="/member/update" style="margin-left: 70%;" th:text="${session.loginEmail}"></a>
-    <a class="service2" href="/member/logout">로그아웃</a>
 </header>
 <section class="section1">
     <h1 class="title_var">응용 프로그램 설명서</h1>
-    <input type="text" class="box_submit" id="searchInput" placeholder="검색어를 입력하세요">
-    <button class="scrollButton" onclick="scrollToSection2()">이동</button>
 </section>
 <div class="box_table">
-<section class="box1">
-    <p>사용법</p>
-</section>
+    <section class="box1">
+        <p onclick="moveFocus('box2', 'for1')">응용 프로그램 사용법</p>
+        <p onclick="moveFocus('box2', 'for2')">사용자 정보 확인하기</p>
+        <p onclick="moveFocus('box2', 'for3')">라이센스 정보 입력방법</p>
+        <p onclick="moveFocus('box2', 'for4')">라이센스 정보 확인</p>
+        <p onclick="moveFocus('box2', 'for5')">라이센스 관리</p>
+    </section>
 <section class="box2">
-    <p>삐이캬츄?</p>
+    <h1 class="for1"  tabindex="0">응용 프로그램 다운 및 로그인</h1>
+    <p>홈페이지 에서 다운로드 버튼을 누른다</p>
+    <div class="image-container">
+    <img src="/images/down.jpg" alt="image">
+    </div>
+    <p>다운로드를 받은 후 응용 프로그램을 실행한다</p>
+    <div class="image-container">
+    <img src="/images/loginfrom.png"  width="600"
+         height="400" alt="image">
+    </div>
+    <p>아이디 비밀번호를 입력한다</p>
+    <p>홈페이지에서 발급 받은 자신의 라이센스 키를 입력한다</p>
+    <div class="image-container">
+        <img src="/images/key.png"  width="600"
+             height="400" alt="image">
+    </div>
+    <div class="horizontal-line"></div>
+
+    <h1 class="for2"  tabindex="0">사용자 정보 확인하기</h1>
+    <p>
+        사용자정보 창은 현재 사용자가 접근 가능한 정보를 제공합니다. <br>
+        여기에는 이메일, 제품 키, 라이선스 만료일, 그리고 라이선스 등록일이 포함됩니다.. <br>
+        아래 부분에는 사용자가 보유한 엑셀 파일을 직접 관리하는 테이블들의 이름이 표시됩니다. <br>
+        테이블의 이름을 확인한 후, 각 테이블의 라이선스를 수정, 삭제, 추가 등 다양한 기능을 <br>
+        활용하여 직접 라이선스를 효과적으로 관리할 수 있습니다. <br>
+        </p>
+
+    <div class="image-container">
+        <img src="/images/mainfrom.png"  width="600"
+             height="400" alt="image">
+    </div>
+    <div class="horizontal-line"></div>
+    <h1 class="for3"  tabindex="0">라이센스 정보 입력방법</h1>
+    <div class="image-container">
+        <img src="/images/lisence1.png"  width="600"
+             height="400" alt="image">
+    </div>
+    <ul class="no-list-style">
+        <li class="clearfix">
+            <div class="billiard-ball">1</div>
+            <div class="additional-text">사용할 테이블 이름을 입력합니다</div>
+        </li>
+    </ul>
+    <div class="image-container">
+        <img src="/images/table.png"  width="600"
+             height="400" alt="image">
+    </div>
+    <ul class="no-list-style">
+        <li class="clearfix">
+            <div class="billiard-ball">2</div>
+            <div class="additional-text">액셀을 불러옵니다</div>
+        </li>
+    </ul>
+    <div class="horizontal-line"></div>
+    <h1 class="for4"  tabindex="0">라이센스 정보 확인</h1>
+    <div class="image-container">
+        <img src="/images/tablecheck.png"  width="600"
+             height="400" alt="image">
+    </div>
+    <p>입력한 테이블의 이름을 검색합니다</p>
+    <div class="horizontal-line"></div>
+
+    <h1 class="for5"  tabindex="0">라이센스 관리</h1>
+    <div class="image-container">
+        <img src="/images/lisenceserarch.png"  width="600"
+             height="400" alt="image">
+    </div>
+    <ul class="no-list-style">
+        <li class="clearfix">
+            <div class="billiard-ball">1</div>
+            <div class="additional-text">테이블을 검색 합니다</div>
+        </li>
+    </ul>
+    <div class="image-container">
+        <img src="/images/licenseinfo1.png"  width="600"
+             height="400" alt="image">
+    </div>
+    <ul class="no-list-style">
+        <li class="clearfix">
+            <div class="billiard-ball">2</div>
+            <div class="additional-text">수정,삭제를 원하는 정보를 선택 합니다</div>
+        </li>
+    </ul>
+    <div class="image-container">
+        <img src="/images/liup.png"  width="600"
+             height="400" alt="image">
+    </div>
+
+    <ul class="no-list-style">
+        <li class="clearfix">
+            <div class="billiard-ball">3</div>
+            <div class="additional-text">수정 버튼을 누르고 데이터를 수정합니다</div>
+        </li>
+    </ul>
+
+    <div class="image-container">
+        <img src="/images/lide.png"  width="600"
+             height="400" alt="image">
+    </div>
+
+    <ul class="no-list-style">
+        <li class="clearfix">
+            <div class="billiard-ball">3</div>
+            <div class="additional-text">삭제 버튼을 누르고 데이터를 수정합니다</div>
+        </li>
+    </ul>
+
+    <div class="image-container">
+        <img src="/images/eero.png"  width="600"
+             height="400" alt="image">
+    </div>
+
+    <h2>※ 주의사항</h2>
+    <p>테이블의 관리하기전에 테이블을 보고 위의 사진과 같이 빈칸이 있으면<br>
+        빈칸을 누르시고 데이터를 삭제해서 빈칸을 삭제해주세요.<br>
+        해당 빈칸을 삭제하지 않고 진행할시에 데이터 관리에 오류가 발생할 수 있습니다.</p>
+
 </section>
 </div>
 <script>
@@ -64,6 +181,22 @@
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
+
+     function moveFocus(boxId, targetId) {
+        // 이전에 포커스를 받은 요소들의 포커스 스타일을 제거
+        document.querySelectorAll('.focused').forEach(element => {
+            element.classList.remove('focused');
+        });
+
+        // 해당 boxId를 가진 박스의 특정 targetId를 가진 <h1>에 포커스를 이동
+        const targetElement = document.querySelector(`.${boxId} .${targetId}`);
+        if (targetElement) {
+            targetElement.focus();
+            targetElement.classList.add('focused'); // 포커스 스타일을 추가
+        }
+    }
+</script>
+</script>
 </script>
 
 
